@@ -1,0 +1,128 @@
+// _global.scss
+
+*{
+  font-family: $font-family;
+  color: $body-color;
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+    font-family: $font-family;
+    background-color: $body-bg; 
+    color: $body-color;
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1600px;
+  }
+
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: $font-family-bold;
+  font-weight: 700;
+  margin: 0;
+  color: $primary-color;
+}
+h3{
+  font-size: 30px;
+  line-height: 40px;
+}
+p{
+  font-family: $font-family;
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  color: $lightdark;
+}
+  a {
+    color: $secondary-color;
+    text-decoration: none;
+    outline: none;
+    &:hover,&:focus{
+      text-decoration: none;
+      outline: none; 
+    }
+  }
+  .bg-light{
+    background-color: $light !important; 
+  }
+  .bg-light-color{
+    color: $lightdark;
+  }
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+.slick-slide {
+    outline: none;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.container{
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.row > *{
+  padding: 0 15px;
+}
+.row {
+  margin-right: -15px !important;
+  margin-left: -15px !important;
+}
+.container-fluid {
+  padding-right: 15px !important;
+  padding-left: 15px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.btn{
+  box-shadow: none;
+  padding: 10px 22px;
+  border-radius: 5px;
+  border: 1px solid;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  border-radius: 75px;
+  display: inline-block;
+}
+.btn-primary{
+  background-color: $primary-color;
+  color: $white;
+  border-color: $primary-color;
+  &:hover{
+    background-color: transparent;
+    border-color: $primary-color;
+    color: $primary-color;
+  }
+}
+.btn-outline-primary{
+  background-color: transparent;
+  color: $primary-color;
+  border-color: $primary-color;
+  &:hover{
+    background-color: $primary-color;
+    color: $white;
+    border-color: $primary-color;
+  }
+}
+.btn-secondary{
+  background-color: $secondary-color;
+  color: $white;
+  border-color: $secondary-color;
+  font-weight: 700;
+  &:hover{
+    background-color: transparent;
+    border-color: $secondary-color;
+    color: $secondary-color;
+  }
+}
+button,.navbar-toggler:focus{
+  outline: none;
+  text-decoration: none;
+  box-shadow: none;
+}

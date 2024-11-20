@@ -1,0 +1,103 @@
+.sidenavbar{
+    .logo{
+        padding-bottom: 40px;
+    }
+    .navbar{
+        padding: 0;
+        height: calc(100vh - 312px);
+        overflow-y: auto;
+        &::-webkit-scrollbar{
+            width: 0;
+            height: 0;
+
+        }
+        a{
+            padding: 14px 20px;
+            text-align: left;
+            color: $lightdark;
+            font-size: 16px;
+            line-height: 18px;
+            font-weight: 400;
+            $font-family:$font-family;
+            border-radius: 75px;
+            text-transform: uppercase;
+            margin-top: 12px;
+            display: flex;
+            align-items: center;
+            span{
+                margin-right: 12px;
+                display: flex;
+                img,svg{
+                    max-width: 20px;
+                }
+                svg{
+                    fill: $primary-color;
+                    path{
+                        stroke: $primary-color;
+                    }
+                }
+            }
+            &.active,&:hover{
+                background-color: $secondary-color;
+                color: $white;
+                img{
+                    filter:  brightness(0) invert(1);
+                }
+                svg{
+                    fill: $white;
+                    path{
+                        stroke: $white;
+                    }
+                }
+            }
+            &:first-child{
+                margin-top: 0;
+            }
+        }
+    }
+    .logout{
+        margin-top: 40px;
+    }
+    .logoutbtn{
+        
+        padding: 14px 20px;
+        text-align: left;
+        color: $primary-color;
+        background-color: $dark;
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 400;
+        $font-family:$font-family;
+        border-radius: 75px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span{
+            margin-right: 12px;
+            display: flex;
+            img,svg{
+                max-width: 20px;
+            }
+            svg{
+                fill: $primary-color;
+                path{
+                    stroke: $primary-color;
+                }
+            }
+        }
+        &.active,&:hover{
+            background-color: $primary-color;
+            color: $white;
+            img{
+                filter:  brightness(0) invert(1);
+            }
+            svg{
+                fill: $white;
+                path{
+                    stroke: $white;
+                }
+            }
+        }
+    }
+}

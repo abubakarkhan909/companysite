@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One n Fun</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+   <div class="onemain">
+    <div class="sidenavbar">
+        <div class="logo">
+            <a href="#" class="logo">
+                <img src="./src/images/logo.svg" alt="">
+            </a>
+        </div>
+        <div class="navbar">
+            <a href="#" >
+                <span>
+                    <img src="./src/images/homeicon.svg" alt="">
+                </span>
+                Home
+            </a>
+            <a href="#" class="active">
+                <span>
+                    <img src="./src/images/messagesicon.svg" alt="">
+                </span>
+                chat
+            </a>
+            <a href="#">
+                <span>
+                    <img src="./src/images/profileicon.svg" alt="">
+                </span>
+                profile
+            </a>
+            <a href="#">
+                <span>
+                    <img src="./src/images/notificationicon.svg" alt="">
+                </span>
+                notification
+            </a>
+            <a href="#">
+                <span>
+                    <img src="./src/images/settingicon.svg" alt="">
+                </span>
+                setting
+            </a>
+        </div>
+        <div class="logout">
+           <a href="#" class="logoutbtn">
+              <span>
+                <img src="./src/images/logouticon.svg" alt="">
+              </span>
+              Log out
+           </a>
+        </div>
+    </div>
+    <div class="centeredarea">
+        <div class="inner_centerdmain">
+            <div class="searching">
+                <h2 id="welcome-text">
+                    Welcome Jimmie
+                </h2>
+                <div class="search-bar">
+                    <input
+                    type="text"
+                    id="search-box"
+                    placeholder="Search families Around you..."
+                    oninput="filterResults()"
+                    />
+                    <button id="clear-btn" onclick="clearSearch()">✖</button>
+                </div>              
+            </div>
+            <div class="nearbylistingmain">
+                <h2 id="recommendation-text">
+                    Recommendations family nearby you.
+                </h2>
+                <ul id="nearby-list">
+                    <li>
+                        <div class="item_rec">
+                            <div class="profilemain">
+                                <div class="pre_img">
+                                    <img src="./src/images/listitem1.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <h3>
+                                        Acacia Silverman
+                                    </h3>
+                                    <p>
+                                        <span>
+                                            <img src="./src/images/locationicon.svg" alt="">
+                                        </span>
+                                        1 Km Away
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="buttonslist">
+                                <a href="#" class="btn btn-outline-primary">
+                                    See profile
+                                </a>
+                                <a href="#" class="btn btn-secondary">
+                                    let's chat
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="friendslist">
+        <div class="friendlisthandler">
+            <div class="titlecount">
+                <h4>
+                    Your Friends 
+                    <span>(38)</span>
+                </h4>
+            </div>
+            <div class="seeallmain">
+                <a class="seeall" href="#">See All</a>
+            </div>
+        </div>
+        <div class="listingmainfrineds">
+            <div class="frndlistitem active">
+                <div class="pre_img">
+                    <img src="./src/images/listitem1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>
+                        Acacia Silverman
+                    </h3>
+                    <p>
+                        Active Now
+                    </p>
+                </div>
+            </div>
+            <div class="frndlistitem">
+                <div class="pre_img">
+                    <img src="./src/images/listitem1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>
+                        Acacia Silverman
+                    </h3>
+                    <p>
+                        Active 3hrs ago
+                    </p>
+                </div>
+            </div>
+            <div class="frndlistitem active">
+                <div class="pre_img">
+                    <img src="./src/images/listitem1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>
+                        Acacia Silverman
+                    </h3>
+                    <p>
+                        Active Now
+                    </p>
+                </div>
+            </div>
+            <div class="frndlistitem">
+                <div class="pre_img">
+                    <img src="./src/images/listitem1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>
+                        Acacia Silverman
+                    </h3>
+                    <p>
+                        Active 3hrs ago
+                    </p>
+                </div>
+            </div>
+            <div class="frndlistitem active">
+                <div class="pre_img">
+                    <img src="./src/images/listitem1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>
+                        Acacia Silverman
+                    </h3>
+                    <p>
+                        Active Now
+                    </p>
+                </div>
+            </div>
+            <div class="frndlistitem">
+                <div class="pre_img">
+                    <img src="./src/images/listitem1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>
+                        Acacia Silverman
+                    </h3>
+                    <p>
+                        Active 3hrs ago
+                    </p>
+                </div>
+            </div>
+            <div class="frndlistitem active">
+                <div class="pre_img">
+                    <img src="./src/images/listitem1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>
+                        Acacia Silverman
+                    </h3>
+                    <p>
+                        Active Now
+                    </p>
+                </div>
+            </div>
+            <div class="frndlistitem">
+                <div class="pre_img">
+                    <img src="./src/images/listitem1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>
+                        Acacia Silverman
+                    </h3>
+                    <p>
+                        Active 3hrs ago
+                    </p>
+                </div>
+            </div>
+            <div class="frndlistitem active">
+                <div class="pre_img">
+                    <img src="./src/images/listitem1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>
+                        Acacia Silverman
+                    </h3>
+                    <p>
+                        Active Now
+                    </p>
+                </div>
+            </div>
+            <div class="frndlistitem">
+                <div class="pre_img">
+                    <img src="./src/images/listitem1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>
+                        Acacia Silverman
+                    </h3>
+                    <p>
+                        Active 3hrs ago
+                    </p>
+                </div>
+            </div>
+            <div class="frndlistitem active">
+                <div class="pre_img">
+                    <img src="./src/images/listitem1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>
+                        Acacia Silverman
+                    </h3>
+                    <p>
+                        Active Now
+                    </p>
+                </div>
+            </div>
+            <div class="frndlistitem">
+                <div class="pre_img">
+                    <img src="./src/images/listitem1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>
+                        Acacia Silverman
+                    </h3>
+                    <p>
+                        Active 3hrs ago
+                    </p>
+                </div>
+            </div>
+            <div class="frndlistitem active">
+                <div class="pre_img">
+                    <img src="./src/images/listitem1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>
+                        Acacia Silverman
+                    </h3>
+                    <p>
+                        Active Now
+                    </p>
+                </div>
+            </div>
+            <div class="frndlistitem">
+                <div class="pre_img">
+                    <img src="./src/images/listitem1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>
+                        Acacia Silverman
+                    </h3>
+                    <p>
+                        Active 3hrs ago
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./src/js/main.js"></script>
+</body>
+</html>

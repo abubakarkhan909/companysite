@@ -1,0 +1,15 @@
+
+@import "global/variables";
+@import "global/global";
+@import "partials/header";
+@import "partials/footer";
+
+// Import page-specific styles
+@import "pages/home";
+@import "pages/profile";
+
+@import "component/friendlist"; 
+@import "component/sidenavbar";
+@import "component/recmandprofile";
+@import "component/search";
+

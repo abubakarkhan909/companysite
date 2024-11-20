@@ -1,0 +1,26 @@
+.onemain{
+    display: grid;
+    grid-template-columns: 280px 1fr 475px;    
+    width: 100%; 
+    box-sizing: border-box;
+    height: 100vh;
+    .sidenavbar{
+        padding: 40px;
+        background-color: $sectionbg;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    } 
+    .centeredarea{
+        border-right: 1px solid $border-color;
+        border-left: 1px solid $border-color; 
+       
+        .inner_centerdmain{
+            padding: 40px 40px 0;
+        }
+    }
+    .friendslist{
+        padding: 40px;
+        background-color: $sectionbg;
+    }
+}

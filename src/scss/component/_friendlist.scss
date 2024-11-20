@@ -1,0 +1,99 @@
+.friendslist{
+
+}
+.friendlisthandler{
+    display: flex;
+    justify-content: space-between;
+    .titlecount{
+        h4{
+            font-size: 22px;
+            line-height: 26px;
+            
+            span{
+                margin-left: 10px;
+                color: $lightdark;
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+    }
+    .seeallmain{
+        .seeall{
+            font-size: 16px;
+            line-height: 19px;
+            text-decoration: underline;
+            font-weight: 500;
+            font-family: $font-family;
+            color: $secondary-color;
+        }
+    }
+}
+.listingmainfrineds{
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 28px 28px 25px;
+    border-radius: 11px;
+    background-color: $white;
+    overflow-y: auto;
+    height: calc(100vh - 131px);
+    &::-webkit-scrollbar{
+        width: 0;
+        height: 0;
+
+    }
+}
+.frndlistitem{
+    display: flex;
+    align-items: center;
+    position: relative;
+    .pre_img{
+        width: 46px;
+        height: 46px;
+        overflow: hidden;
+        border-radius: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .content{
+        padding-left: 20px;
+        width: calc(100% - 46px);
+        padding-right: 7px;
+        h3{
+            font-size: 16px;
+            line-height: 16px;
+            font-weight: 600;
+            font-family: $font-family;
+            margin-bottom: 8px;
+        }
+        p{
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: 400;
+            color: $lightdark;
+        }
+
+    }
+    &.active{
+        
+        &::before{
+            content: "";
+            position: absolute;
+            right: 0;
+            width: 8px;
+            height: 8px;
+            border-radius: 100%;
+            background-color: $activesuccess;
+
+        }
+        .content{
+            p{
+                color: $activesuccess;
+            }
+        }
+    }
+}
