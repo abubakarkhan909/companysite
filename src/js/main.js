@@ -155,3 +155,54 @@ $("#imageUpload").change(function() {
     readURL(this);
 });
   
+$(document).ready(function () {
+  // Function to open a modal
+  function openModal(modalId) {
+      $(".modal").hide(); // Hide all modals
+      $(modalId).fadeIn(); // Show the requested modal
+  }
+
+  // Function to close a modal
+  function closeModal() {
+      $(".modal").fadeOut();
+  }
+
+  // Open specific modals
+  $(".open-login").on("click", function () {
+      openModal("#loginModal");
+  });
+
+  $(".open-signup").on("click", function () {
+      openModal("#signupModal");
+  });
+
+  $(".open-profile").on("click", function () {
+      openModal("#profileModal");
+  });
+
+  $(".open-forgot-password").on("click", function () {
+      openModal("#forgotPasswordModal");
+  });
+
+  $(".open-otp").on("click", function () {
+      openModal("#otpModal");
+  });
+
+  $(".open-new-password").on("click", function () {
+      openModal("#newPasswordModal");
+  });
+
+  // Close modals on close button click
+  $(".close-btn").on("click", function () {
+      closeModal();
+  });
+
+  // Close modals on clicking outside the modal
+  $(window).on("click", function (e) {
+   
+      if ($(e.target).hasClass("modal")) {
+        console.log("test2")
+          closeModal();
+      }
+  });
+});

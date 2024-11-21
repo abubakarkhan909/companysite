@@ -17,13 +17,13 @@
             Explore Locally, Connect Personally.
         </h2>
         <div class="btns">
-            <a href="#" class="btn btn-secondary">
+            <a href="#" class="btn btn-secondary ">
                 LET’S GET STARTED 
                 <span>
                     <img src="./src/images/arrow-right.svg" alt="arrow">
                 </span>
             </a>
-            <a href="#" class="btn btn-outline-primary">
+            <a href="#" class="btn btn-outline-primary open-login">
                 SIGN IN
                 <span>
                     <img src="./src/images/login.svg" alt="login">
@@ -32,7 +32,77 @@
         </div>
     </div>
   </div>
-    
+    <!-- Login Modal -->
+<div id="loginModal" class="modal" data-modal="login">
+    <div class="modal-content">
+        <span class="close-btn"></span>
+        <h2>Welcome back 👋</h2>
+        <p>
+            Login now to share and explore local adventures with nearby loved ones on One and fun.
+        </p>
+        <form>
+            <!-- Login Form Fields -->
+            <button type="button" class="open-signup">Sign Up</button>
+        </form>
+    </div>
+</div>
+
+<!-- Sign Up Modal -->
+<div id="signupModal" class="modal" data-modal="signup">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Sign Up</h2>
+        <form>
+            <!-- Sign Up Form Fields -->
+            <button type="button" class="open-profile">Create Profile</button>
+        </form>
+    </div>
+</div>
+
+<!-- Profile Modal -->
+<div id="profileModal" class="modal" data-modal="profile">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Create Profile</h2>
+        <form>
+            <!-- Profile Form -->
+        </form>
+    </div>
+</div>
+
+<!-- Forgot Password Modal -->
+<div id="forgotPasswordModal" class="modal" data-modal="forgot-password">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Forgot Password</h2>
+        <form>
+            <!-- Forgot Password Form Fields -->
+        </form>
+    </div>
+</div>
+
+<!-- OTP Modal -->
+<div id="otpModal" class="modal" data-modal="otp">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>OTP Verification</h2>
+        <form>
+            <!-- OTP Form Fields -->
+        </form>
+    </div>
+</div>
+
+<!-- New Password Modal -->
+<div id="newPasswordModal" class="modal" data-modal="new-password">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Set New Password</h2>
+        <form>
+            <!-- New Password Form Fields -->
+        </form>
+    </div>
+</div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./src/js/main.js"></script>
 </body>
