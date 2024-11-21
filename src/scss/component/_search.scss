@@ -6,6 +6,7 @@
         border: none;
         + .nearbylistingmain{
             padding-top: 16px;
+            height: calc(100vh - 146px);
             .item_rec:hover{
                 border-color: $primary-color;
             }

@@ -11,7 +11,6 @@ body {
   color: #000;
   box-sizing: border-box;
   margin: 0 auto;
-  max-width: 1600px;
 }
 
 ::-webkit-scrollbar {
@@ -362,8 +361,8 @@ button, .navbar-toggler:focus {
 
 .listingmainfrineds {
   margin-top: 25px;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 25px;
   padding: 28px 28px 25px;
   border-radius: 11px;
@@ -522,9 +521,10 @@ button, .navbar-toggler:focus {
 }
 
 .nearbylistingmain {
-  padding-top: 40px;
-  height: calc(100vh - 176px);
+  padding-top: 36px;
+  height: calc(100vh - 180px);
   overflow-y: auto;
+  margin-bottom: 6px;
 }
 .nearbylistingmain::-webkit-scrollbar {
   width: 0;
@@ -608,6 +608,7 @@ button, .navbar-toggler:focus {
 }
 .searching.searchactive + .nearbylistingmain {
   padding-top: 16px;
+  height: calc(100vh - 146px);
 }
 .searching.searchactive + .nearbylistingmain .item_rec:hover {
   border-color: #324652;

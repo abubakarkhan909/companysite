@@ -30,8 +30,8 @@
 }
 .listingmainfrineds{
     margin-top: 25px;
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 25px;
     padding: 28px 28px 25px;
     border-radius: 11px;
