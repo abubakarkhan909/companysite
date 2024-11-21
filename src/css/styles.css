@@ -98,7 +98,15 @@ img {
   font-weight: 500;
   line-height: 17px;
   border-radius: 75px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  text-align: center;
+  justify-content: center;
+}
+.btn span {
+  margin-left: 10px;
+  display: flex;
 }
 
 .btn-primary {
@@ -122,6 +130,9 @@ img {
   color: #fff;
   border-color: #324652;
 }
+.btn-outline-primary:hover span img {
+  filter: brightness(0) saturate(100%) invert(100%);
+}
 
 .btn-secondary {
   background-color: #FF0101;
@@ -133,6 +144,9 @@ img {
   background-color: transparent;
   border-color: #FF0101;
   color: #FF0101;
+}
+.btn-secondary:hover span img {
+  filter: brightness(0) saturate(100%) invert(24%) sepia(96%) saturate(6364%) hue-rotate(360deg) brightness(91%) contrast(101%);
 }
 
 button, .navbar-toggler:focus {
@@ -596,6 +610,9 @@ button, .navbar-toggler:focus {
 }
 .item_rec .buttonslist {
   width: 240px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .searching {
@@ -646,6 +663,37 @@ button, .navbar-toggler:focus {
   color: #324652;
   font-family: "Inter", sans-serif;
   font-weight: 100;
+}
+
+.getstarted {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: url(./../images/Getstarted_Screen.png) no-repeat;
+  background-size: cover;
+}
+
+.exploremain {
+  width: 736px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.exploremain h2 {
+  font-size: 60px;
+  line-height: 66px;
+  font-weight: 800;
+  text-align: center;
+  max-width: 660px;
+  margin: 60px auto 47px;
+}
+.exploremain .btns {
+  display: flex;
+  gap: 26px;
+}
+.exploremain .btns .btn {
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */
