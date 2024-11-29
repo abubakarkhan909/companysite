@@ -17,7 +17,7 @@
             Explore Locally, Connect Personally.
         </h2>
         <div class="btns">
-            <a href="#" class="btn btn-secondary ">
+            <a href="#" class="btn btn-secondary open-profile">
                 LET’S GET STARTED 
                 <span>
                     <img src="./src/images/arrow-right.svg" alt="arrow">
@@ -38,11 +38,38 @@
         <span class="close-btn"></span>
         <h2>Welcome back 👋</h2>
         <p>
-            Login now to share and explore local adventures with nearby loved ones on One and fun.
+            Login now to share and explore local adventures with nearby loved ones on <strong>One and fun</strong>.
         </p>
-        <form>
-            <!-- Login Form Fields -->
-            <button type="button" class="open-signup">Sign Up</button>
+        <form class="formmain">
+            <div class="input-group">
+                <label for="">Email address <span class="required">*</span></label>
+                <input class="form-control" type="text" placeholder="example@gmail.com" >
+            </div>
+            <div class="input-group">
+                <label for="">Password <span class="required">*</span></label>
+                <input class="form-control" type="password" placeholder="**********" >
+            </div>
+            <div class="input-group">
+                <div class="forgetdiv">
+                    <a href="#" class="forgettext open-forgot-password">Forgot Password?</a>
+                </div>
+            </div>
+             <div class="input-group">
+                <label class="checkbox">Remember me
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+             </div>
+             <button class="btn btn-secondary w-100 btn_lg">
+                Login
+                <span>
+                    <img src="./src/images/login.svg" alt="arrow">
+                </span>
+             </button>
+             <p class="askaccount">
+                Don't have an account? <button type="button" class="open-signup textbtn">Create Your account</button>
+             </p>
+            
         </form>
     </div>
 </div>
@@ -50,23 +77,310 @@
 <!-- Sign Up Modal -->
 <div id="signupModal" class="modal" data-modal="signup">
     <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <h2>Sign Up</h2>
-        <form>
-            <!-- Sign Up Form Fields -->
-            <button type="button" class="open-profile">Create Profile</button>
+        <span class="close-btn"></span>
+        <h2>Sign up to your account 😎</h2>
+        <p>
+            Enter the details to sign uo into your account
+        </p>
+        <form class="formmain">
+            <div class="input-group">
+                <label for="">Full Name <span class="required">*</span></label>
+                <input class="form-control" type="text" placeholder="John Smith" >
+            </div>
+            <div class="input-group">
+                <label for="">Email address <span class="required">*</span></label>
+                <input class="form-control" type="text" placeholder="example@gmail.com" >
+            </div>
+            <div class="input-group">
+                <label for="">Password <span class="required">*</span></label>
+                <input class="form-control" type="password" placeholder="**********" >
+            </div>
+            <div class="input-group">
+                <label for="">Confirm Password <span class="required">*</span></label>
+                <input class="form-control" type="password" placeholder="**********" >
+            </div>
+             <button class="btn btn_lg btn-secondary w-100 open-setprofile">
+                Create Account
+                <span>
+                    <img src="./src/images/arrow-right.svg" alt="arrow">
+                </span>
+             </button>
+             <p class="askaccount">
+                Already have an account? <button type="button" class="open-login textbtn">SIGN IN</button>
+             </p>
+            
         </form>
     </div>
 </div>
-
+<!-- set Profile Modal -->
+<div id="setprofileModal" class="modal" data-modal="setprofileModal">
+    <div class="modal-content">
+        <span class="close-btn"></span>
+        <h2>Setup your profile 😉</h2>
+        <p>
+            Set up your profile! Share interests, add a bio, and a photo for a vibrant snapshot. 
+            Personalize your experience and connect with like-minded individuals. Your memorable journey starts here!
+        </p>
+        <button class="btn btn_lg btn-secondary w-100 mt_42px text-uppercase open-profile">
+            Let’s create profile
+            <span>
+                <img src="./src/images/arrow-right.svg" alt="arrow">
+            </span>
+        </button>
+    </div>
+</div>
 <!-- Profile Modal -->
 <div id="profileModal" class="modal" data-modal="profile">
     <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <h2>Create Profile</h2>
-        <form>
-            <!-- Profile Form -->
-        </form>
+        <span class="close-btn"></span>
+        <div class="progressteps">
+            <p class="remaining">
+                Only <span class="remaingsteps">4</span> Questions Left!
+            </p>
+            <div class="progress-container">
+                <div class="progress" id="progress"></div>
+                  <div class="circle active">
+                    1
+                  </div>
+                  <div class="circle">
+                    2
+                  </div>
+                  <div class="circle">
+                    3
+                  </div>
+                  <div class="circle">
+                    4
+                  </div>
+                  <div class="circle">
+                    5
+                  </div>
+              </div>
+        </div>
+        <div class="step step1">
+            <h2>Name of parent</h2>
+            <p>
+                Enter the details and setup profile
+            </p>
+            <form class="formmain">
+                <div class="input-group">
+                    <label for="">Mother Name <span class="required">*</span></label>
+                    <input class="form-control" type="text" placeholder="Herry" >
+                </div>
+                <div class="input-group">
+                    <label for="">Father Name <span class="required">*</span></label>
+                    <input class="form-control" type="text" placeholder="John Smith" >
+                </div>
+                <button class="btn btn_lg btn-secondary w-100" id="next">
+                    Next
+                    <span>
+                        <img src="./src/images/arrow-right.svg" alt="arrow">
+                    </span>
+                </button>
+            </form>
+        </div>
+        <div class="step step2">
+            <h2>Your Ideal Age Group?</h2>
+            <p>
+                Please select the age group of kids you're interested in mingling with:
+            </p>
+            <form class="formmain">
+                <div class="input-group">
+                    <ul class="ageselecter">
+                        <li>
+                            <input type="radio" id="0-1" name="selector">
+                            <label for="0-1">0 - 1 Years</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="2-3" name="selector">
+                            <label for="2-3">2 - 3 Years</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="4-5" name="selector">
+                            <label for="4-5">4 - 5 Years</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="6-7" name="selector">
+                            <label for="6-7">6 - 7 Years</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="8-9" name="selector">
+                            <label for="8-9">8 - 9 Years</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="10-11" name="selector">
+                            <label for="10-11">10 - 11 Years</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="12-14" name="selector">
+                            <label for="12-14">12 - 14 Years</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btns">
+                    <button class="btn btn_lg btn-outline-primary leftie w-100" id="prev">
+                        <span>
+                            <img src="./src/images/arrow-leftprimary.svg" alt="arrow">
+                        </span>
+                        Previous
+                    </button>
+                    <button class="btn btn_lg btn-secondary w-100" id="next">
+                        Next
+                        <span>
+                            <img src="./src/images/arrow-right.svg" alt="arrow">
+                        </span>
+                    </button>
+                </div>
+                
+            </form>
+        </div>
+        <div class="step step3">
+            <h2>Where are you located?</h2>
+            <p>
+                Enter your location in detail
+            </p>
+            <form class="formmain">
+                <div class="inputs_groups">
+                    <div class="input-group">
+                        <label for="">City <span class="required">*</span></label>
+                        <select class="form-control">
+                            <option value="default" disabled selected>Sellect city</option> 
+                            <option value="Islamabad">Islamabad</option>
+                            <option value="Lahore">Lahore</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="">Zip Code (optional)</label>
+                        <select class="form-control">
+                            <option value="default" disabled selected>Sellect State</option> 
+                            <option value="Islamabad">Islamabad</option>
+                            <option value="Lahore">Lahore</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="">Country <span class="required">*</span></label>
+                    <select class="form-control">
+                        <option value="default" disabled selected>Sellect Country</option> 
+                        <option value="Islamabad">Islamabad</option>
+                        <option value="Lahore">Lahore</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="">State <span class="required">*</span></label>
+                    <select class="form-control">
+                        <option value="default" disabled selected>Sellect State</option> 
+                        <option value="Islamabad">Islamabad</option>
+                        <option value="Lahore">Lahore</option>
+                    </select>
+                </div>
+                <div class="btns">
+                    <button class="btn btn_lg btn-outline-primary leftie w-100" id="prev">
+                        <span>
+                            <img src="./src/images/arrow-leftprimary.svg" alt="arrow">
+                        </span>
+                        Previous
+                    </button>
+                    <button class="btn btn_lg btn-secondary w-100" id="next">
+                        Next
+                        <span>
+                            <img src="./src/images/arrow-right.svg" alt="arrow">
+                        </span>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="step step4">
+            <h2>Are you interested in playdates or meetups?</h2>
+            <p>
+                Enter details or skip as you prefer.
+            </p>
+            <form class="formmain">
+                <div class="input-group">
+                    <ul class="ageselecter">
+                        <li>
+                            <input type="radio" id="Yes" name="selector">
+                            <label for="Yes">Yes</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="No" name="selector">
+                            <label for="No">No</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="Maybe" name="selector">
+                            <label for="Maybe">Maybe</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btns">
+                    <button class="btn btn_lg btn-outline-primary leftie w-100" id="prev">
+                        <span>
+                            <img src="./src/images/arrow-leftprimary.svg" alt="arrow">
+                        </span>
+                        Previous
+                    </button>
+                    <button class="btn btn_lg btn-secondary w-100" id="next">
+                        Next
+                        <span>
+                            <img src="./src/images/arrow-right.svg" alt="arrow">
+                        </span>
+                    </button>
+                </div>
+                <button class="btn textbtn w-100" id="skip">
+                    Skip this step
+                    <span>
+                        <img src="./src/images/arrow-right-primary.svg" alt="arrow">
+                    </span>
+                </button>
+                
+            </form>
+        </div>
+        <div class="step step5">
+            <h2>Create your account for just $1</h2>
+            <p>
+                Kindly provide your card information below.
+            </p>
+            <form class="formmain">
+                <div class="input-group">
+                    <label for="">Card Number <span class="required">*</span></label>
+                    <input class="form-control" type="text" placeholder="1234 1234 1234 1234" >
+                </div>
+                <div class="inputs_groups">
+                    <div class="input-group">
+                        <label for="">Expiration <span class="required">*</span></label>
+                        <select class="form-control">
+                            <option value="default" disabled selected>MM / YY</option> 
+                            <option value="Islamabad">Islamabad</option>
+                            <option value="Lahore">Lahore</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="">CVC <span class="required">*</span></label>
+                        <select class="form-control">
+                            <option value="default" disabled selected>CVC</option> 
+                            <option value="Islamabad">Islamabad</option>
+                            <option value="Lahore">Lahore</option>
+                        </select>
+                    </div>
+                </div>
+                
+                
+                <div class="btns">
+                    <button class="btn btn_lg btn-outline-primary leftie w-100" id="prev">
+                        <span>
+                            <img src="./src/images/arrow-leftprimary.svg" alt="arrow">
+                        </span>
+                        Previous
+                        
+                    </button>
+                    <button class="btn btn_lg btn-secondary w-100" id="next">
+                        Pay now
+                        <span>
+                            <img src="./src/images/arrow-right.svg" alt="arrow">
+                        </span>
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
@@ -74,9 +388,21 @@
 <div id="forgotPasswordModal" class="modal" data-modal="forgot-password">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
-        <h2>Forgot Password</h2>
-        <form>
-            <!-- Forgot Password Form Fields -->
+        <h2>Forgot password</h2>
+        <p>
+            Enter your email to reset your password.
+        </p>
+        <form class="formmain">
+            <div class="input-group">
+                <label for="">Email address <span class="required">*</span></label>
+                <input class="form-control" type="text" placeholder="example@gmail.com" >
+            </div>
+             <button class="btn btn-secondary w-100 btn_lg">
+                Continue
+                <span>
+                    <img src="./src/images/login.svg" alt="arrow">
+                </span>
+             </button>            
         </form>
     </div>
 </div>

@@ -103,10 +103,19 @@ img {
   width: fit-content;
   text-align: center;
   justify-content: center;
+  cursor: pointer;
 }
 .btn span {
   margin-left: 10px;
   display: flex;
+}
+.btn.leftie span {
+  margin-left: 0px;
+  margin-right: 10px;
+}
+.btn.btn_lg {
+  font-size: 20px;
+  line-height: 24px;
 }
 
 .btn-primary {
@@ -140,6 +149,9 @@ img {
   border-color: #FF0101;
   font-weight: 700;
 }
+.btn-secondary span img {
+  filter: brightness(0) saturate(100%) invert(100%);
+}
 .btn-secondary:hover {
   background-color: transparent;
   border-color: #FF0101;
@@ -153,6 +165,27 @@ button, .navbar-toggler:focus {
   outline: none;
   text-decoration: none;
   box-shadow: none;
+}
+
+.textbtn {
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  color: #324652;
+  cursor: pointer;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.mt_42px {
+  margin-top: 42px;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
 }
 
 .onemain {
@@ -712,12 +745,14 @@ button, .navbar-toggler:focus {
   position: relative;
   background: #fff;
   margin: auto;
-  padding: 48px 60px;
+  padding: 45px 60px;
   width: 620px;
   max-width: 620px;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 30px;
+  overflow: auto;
+  max-height: calc(100% - 105px);
 }
 .modal-content h2 {
   font-size: 48px;
@@ -731,6 +766,9 @@ button, .navbar-toggler:focus {
   text-align: center;
   color: #516B7B;
   margin-top: 18px;
+}
+.modal-content p strong {
+  color: #516B7B;
 }
 
 .close-btn {
@@ -760,6 +798,257 @@ button, .navbar-toggler:focus {
 .close-btn:hover {
   background-color: #FF0101;
   color: #fff;
+}
+
+.formmain {
+  margin-top: 42px;
+}
+.formmain .btn {
+  text-transform: uppercase;
+}
+.formmain .askaccount {
+  font-size: 14px;
+  line-height: 18px;
+  color: #516B7B;
+  font-weight: 400;
+}
+.formmain .askaccount .textbtn {
+  color: #324652;
+}
+.formmain .btns {
+  display: flex;
+  gap: 22px;
+}
+.formmain #skip.btn {
+  margin-top: 30px;
+}
+
+.forgetdiv {
+  text-align: right;
+  margin-top: -10px;
+}
+
+.forgettext {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #324652;
+}
+.forgettext:hover {
+  color: #FF0101;
+}
+
+.input-group {
+  margin-bottom: 25px;
+}
+.input-group label {
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 18px;
+  color: #324652;
+  margin-bottom: 10px;
+  display: block;
+}
+.input-group label .required {
+  color: #FF0101;
+  margin-left: 3px;
+}
+.input-group input:not([type=submit]) {
+  border: 1px solid rgba(50, 70, 82, 0.2196078431);
+  border-radius: 35px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #324652;
+  padding: 19px 22px;
+}
+.input-group .checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 0;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 22px;
+  color: #516B7B;
+  margin-bottom: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.input-group .checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.input-group .checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background-color: transparent;
+  border: 1px solid #516B7B;
+  border-radius: 5px;
+}
+.input-group .checkbox .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 4px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.input-group .checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.input-group .checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.input-group .checkbox input:checked ~ .checkmark {
+  background-color: #FF0101;
+  border-color: #FF0101;
+}
+.input-group .checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+.input-group select {
+  border: 1px solid rgba(50, 70, 82, 0.2196078431);
+  border-radius: 35px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #324652;
+  padding: 19px 22px;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(./../images/arrow_down.png) no-repeat calc(100% - 20px) 24px;
+  background-size: 13px;
+  cursor: pointer;
+}
+
+.inputs_groups {
+  display: flex;
+  justify-content: space-between;
+}
+.inputs_groups .input-group {
+  width: calc(50% - 7.5px);
+}
+
+.progressteps {
+  width: 100%;
+}
+.progressteps p {
+  margin: 0;
+}
+.progressteps .progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 30px 0;
+  max-width: 100%;
+}
+.progressteps .progress-container::before {
+  content: "";
+  background-color: #F2FAFF;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  z-index: -1;
+}
+.progressteps .progress {
+  background-color: #FF0101;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 0%;
+  z-index: -1;
+  transition: 0.4s ease;
+}
+.progressteps .circle {
+  background-color: #fff;
+  color: #999;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #F2FAFF;
+  transition: 0.4s ease;
+}
+.progressteps .circle.active {
+  border-color: #FF0101;
+  background-color: #FF0101;
+  color: #fff;
+}
+
+.ageselecter {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.ageselecter li {
+  margin: 5px 5px;
+}
+.ageselecter li input[type=radio] {
+  position: absolute;
+  visibility: hidden;
+}
+.ageselecter li label {
+  display: block;
+  position: relative;
+  border: 1px solid rgba(50, 70, 82, 0.2196078431);
+  padding: 18px 20px;
+  color: #324652;
+  font-size: 14px;
+  line-height: 12px;
+  font-weight: 400;
+  border-radius: 35px;
+  margin: 0px;
+  z-index: 9;
+  min-width: 110px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all 0.25s linear;
+}
+.ageselecter li label:hover {
+  color: #fff;
+  background-color: #324652;
+  border-color: #324652;
+  font-weight: 700;
+}
+.ageselecter li input[type=radio]:checked ~ label {
+  color: #fff;
+  background-color: #324652;
+  border-color: #324652;
+  font-weight: 700;
+}
+
+.hidden {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

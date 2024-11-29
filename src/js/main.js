@@ -175,7 +175,9 @@ $(document).ready(function () {
   $(".open-signup").on("click", function () {
       openModal("#signupModal");
   });
-
+  $(".open-setprofile").on("click", function () {
+    openModal("#setprofileModal");
+  });
   $(".open-profile").on("click", function () {
       openModal("#profileModal");
   });
@@ -192,12 +194,10 @@ $(document).ready(function () {
       openModal("#newPasswordModal");
   });
 
-  // Close modals on close button click
   $(".close-btn").on("click", function () {
       closeModal();
   });
 
-  // Close modals on clicking outside the modal
   $(window).on("click", function (e) {
    
       if ($(e.target).hasClass("modal")) {
@@ -206,3 +206,57 @@ $(document).ready(function () {
       }
   });
 });
+
+
+$(document).ready(function () {
+  let currentStep = 1; 
+  const totalSteps = $(".step").length;
+  function showStep(step) {
+      $(".step").addClass("hidden"); 
+      $(`.step${step}`).removeClass("hidden"); 
+      if (step === totalSteps) {
+        $("p.remaining").html("Last Question!"); 
+    } else {
+      $("p.remaining").html(
+        `Only <span class="remaingsteps">${step}</span> Questions Left!`
+    );
+    }
+    updateProgress(step);
+  }
+  function updateProgress(step) {
+      const progressPercentage = ((step - 1) / (totalSteps - 1)) * 100;
+      $("#progress").css("width", `${progressPercentage}%`);
+
+      $(".circle").each(function (index) {
+          if (index < step) {
+              $(this).addClass("active");
+          } else {
+              $(this).removeClass("active");
+          }
+      });
+  }
+  showStep(currentStep);
+  $(document).on("click", "#next", function (e) {
+      e.preventDefault();
+      if (currentStep < totalSteps) {
+          currentStep++;
+          showStep(currentStep);
+      }
+  });
+  $(document).on("click", "#prev", function (e) {
+      e.preventDefault();
+      
+      if (currentStep > 1) {
+          currentStep--;
+          showStep(currentStep);
+      }
+  });
+  $(document).on("click", "#skip", function (e) {
+      e.preventDefault();
+      if (currentStep < totalSteps) {
+          currentStep++;
+          showStep(currentStep);
+      }
+  });
+});
+

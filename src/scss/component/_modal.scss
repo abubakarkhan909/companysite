@@ -14,12 +14,14 @@
     position: relative;
     background: $white;
     margin: auto;
-    padding: 48px 60px;
+    padding: 45px 60px;
     width: 620px;
     max-width: 620px;
     top: 50%;
     transform: translateY(-50%);
     border-radius: 30px;
+    overflow: auto;
+    max-height: calc(100% - 105px);
     h2{
         font-size: 48px;
         line-height: 48px;
@@ -32,6 +34,9 @@
         text-align: center;
         color: $lightdark;
         margin-top: 18px;
+        strong{
+            color: $lightdark;
+        }
     }
 }
 

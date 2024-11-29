@@ -93,9 +93,20 @@ p{
   width: fit-content;
   text-align: center;
   justify-content: center;
+  cursor: pointer;
   span{
     margin-left: 10px;
     display: flex;
+  }
+  &.leftie{
+    span{
+      margin-left: 0px;
+      margin-right: 10px;
+    }
+  }
+  &.btn_lg{
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 .btn-primary{
@@ -129,6 +140,11 @@ p{
   color: $white;
   border-color: $secondary-color;
   font-weight: 700;
+  span{
+    img{
+      filter: brightness(0) saturate(100%) invert(100%);
+    }
+  }
   &:hover{
     background-color: transparent;
     border-color: $secondary-color;
@@ -144,4 +160,22 @@ button,.navbar-toggler:focus{
   outline: none;
   text-decoration: none;
   box-shadow: none;
+}
+.textbtn{
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  color: $primary-color;
+  cursor: pointer;
+}
+
+.w-100{
+  width: 100%;
+}
+.mt_42px{
+  margin-top: 42px;
+}
+.text-uppercase{
+  text-transform: uppercase;
 }
