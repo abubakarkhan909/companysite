@@ -168,29 +168,36 @@ $(document).ready(function () {
   }
 
   // Open specific modals
-  $(".open-login").on("click", function () {
+  $(".open-login").on("click", function (e) {
+      e.preventDefault(); 
       openModal("#loginModal");
   });
 
-  $(".open-signup").on("click", function () {
+  $(".open-signup").on("click", function (e) {
+      e.preventDefault(); 
       openModal("#signupModal");
   });
-  $(".open-setprofile").on("click", function () {
+  $(".open-setprofile").on("click", function (e) {
+    e.preventDefault(); 
     openModal("#setprofileModal");
   });
-  $(".open-profile").on("click", function () {
+  $(".open-profile").on("click", function (e) {
+    e.preventDefault(); 
       openModal("#profileModal");
   });
 
-  $(".open-forgot-password").on("click", function () {
+  $(".open-forgot-password").on("click", function (e) {
+    e.preventDefault(); 
       openModal("#forgotPasswordModal");
   });
 
-  $(".open-otp").on("click", function () {
+  $(".open-otp").on("click", function (e) {
+    e.preventDefault(); 
       openModal("#otpModal");
   });
 
-  $(".open-new-password").on("click", function () {
+  $(".open-new-password").on("click", function (e) {
+    e.preventDefault(); 
       openModal("#newPasswordModal");
   });
 
