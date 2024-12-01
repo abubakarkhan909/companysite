@@ -246,3 +246,18 @@
 .hidden {
     display: none;
   }
+
+  @media screen and (max-width:768px) {
+    .formmain{
+        margin-top: 20px;
+    }
+    .input-group input:not([type=submit]) {
+        padding: 14px 16px;
+    }
+    .inputs_groups{
+        flex-direction: column;
+        .input-group {
+            width: 100%;
+        }
+    }
+  }

@@ -27,3 +27,32 @@
         }
     }
 }
+
+@media screen and (max-width:992px) {
+    .getstarted{
+        background-position: center center;
+    }
+    .exploremain{
+        max-width: 80%;
+        width: 100%;
+    }
+    .exploremain h2 {
+        font-size: 40px;
+        line-height: 44px;
+        margin: 30px auto 30px;
+    }
+}
+@media screen and (max-width:576px) {
+    .exploremain {
+        margin-bottom: 70px;
+    }
+    .exploremain .btns{
+        flex-direction: column;
+
+    }
+    .exploremain h2 {
+        font-size: 28px;
+        line-height: 32px;
+        margin: 22px auto 22px;
+    }
+}
