@@ -8,394 +8,416 @@
     <link rel="stylesheet" href="src/css/styles.css">
 </head>
 <body>
-   <div class="onemain">
-    <div class="sidenavbar">
-        <div class="logo">
-            <a href="#" class="logo">
+    <header>
+        <div class="logohere">
+            <a href="#">
                 <img src="./src/images/logo.svg" alt="">
             </a>
+            
         </div>
-        <div class="navbar">
-            <a href="#" >
-                <span>
-                    <img src="./src/images/homeicon.svg" alt="">
-                </span>
-                Home
-            </a>
-            <a href="#" class="active">
-                <span>
-                    <img src="./src/images/messagesicon.svg" alt="">
-                </span>
-                chat
-            </a>
-            <a href="#">
-                <span>
-                    <img src="./src/images/profileicon.svg" alt="">
-                </span>
-                profile
-            </a>
-            <a href="#">
-                <span>
-                    <img src="./src/images/notificationicon.svg" alt="">
-                </span>
-                notification
-            </a>
-            <a href="#">
-                <span>
-                    <img src="./src/images/settingicon.svg" alt="">
-                </span>
-                setting
+        <div class="toggling">
+            <a href="#" id="toggle">
+                <div class="togglemenu">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>
             </a>
         </div>
-        <div class="logout">
-           <a href="#" class="logoutbtn">
-              <span>
-                <img src="./src/images/logouticon.svg" alt="">
-              </span>
-              Log out
-           </a>
-        </div>
+    </header>
+    <div class="frindlistbtn">
+        <img src="./src/images/friendlisticon.png" alt="">
     </div>
-    <div class="centeredarea">
-        <div class="profile_main">
-            <div class="bg_img" style="background: url(./src/images/profilebg.png)no-repeat center;"></div>
-            <div class="profileicon_info">
-                <div class="profileicon_in">
-                    <div class="avatar-upload profileoicon">
-                        <div class="avatar-edit">
-                            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
-                            <label for="imageUpload"></label>
-                        </div>
-                        <div class="avatar-preview">
-                            <div id="imagePreview" style="background-image: url(./src/images/profile.png);">
+    <div class="onemain">
+        <div class="sidenavbar">
+            <div class="logo">
+                <a href="#" class="logo">
+                    <img src="./src/images/logo.svg" alt="">
+                </a>
+            </div>
+            <div class="navbar">
+                <a href="#" >
+                    <span>
+                        <img src="./src/images/homeicon.svg" alt="">
+                    </span>
+                    Home
+                </a>
+                <a href="#" class="active">
+                    <span>
+                        <img src="./src/images/messagesicon.svg" alt="">
+                    </span>
+                    chat
+                </a>
+                <a href="#">
+                    <span>
+                        <img src="./src/images/profileicon.svg" alt="">
+                    </span>
+                    profile
+                </a>
+                <a href="#">
+                    <span>
+                        <img src="./src/images/notificationicon.svg" alt="">
+                    </span>
+                    notification
+                </a>
+                <a href="#">
+                    <span>
+                        <img src="./src/images/settingicon.svg" alt="">
+                    </span>
+                    setting
+                </a>
+            </div>
+            <div class="logout">
+            <a href="#" class="logoutbtn">
+                <span>
+                    <img src="./src/images/logouticon.svg" alt="">
+                </span>
+                Log out
+            </a>
+            </div>
+        </div>
+        <div class="centeredarea">
+            <div class="profile_main">
+                <div class="bg_img" style="background: url(./src/images/profilebg.png)no-repeat center;"></div>
+                <div class="profileicon_info">
+                    <div class="profileicon_in">
+                        <div class="avatar-upload profileoicon">
+                            <div class="avatar-edit">
+                                <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                <label for="imageUpload"></label>
+                            </div>
+                            <div class="avatar-preview">
+                                <div id="imagePreview" style="background-image: url(./src/images/profile.png);">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="profile_content">
-                        <div class="profile_text">
-                            <h3>
-                                Jimmie Mess
-                            </h3>
-                            <p>
-                                <span>
-                                    <img src="./src/images/locationicon.svg" alt="">
-                                </span>
-                                1 Km Away
-                            </p>
+                        <div class="profile_content">
+                            <div class="profile_text">
+                                <h3>
+                                    Jimmie Mess
+                                </h3>
+                                <p>
+                                    <span>
+                                        <img src="./src/images/locationicon.svg" alt="">
+                                    </span>
+                                    1 Km Away
+                                </p>
+                            </div>
+                            <div class="buttonsarea">
+                                <a href="#" class="btn btn-secondary">Let's chat</a>
+                            </div>
                         </div>
-                        <div class="buttonsarea">
-                            <a href="#" class="btn btn-secondary">Let's chat</a>
-                        </div>
+                        
                     </div>
                     
                 </div>
-                
-            </div>
-            <div class="bioinfo">
-                <h2>
-                    Bio
-                </h2>
-                <p>
-                    Nullam et ornare elit, quis maximus nibh. Aenean sed 
-                    magna eget enim pharetra consectetur et eu magna. 
-                    Nunc dui leo, pretium quis eros non, tincidunt finibus 
-                    odio. Aenean tempus ut neque vel dapibus. Vivamus 
-                    vehicula quis sapien nec sollicitudin. Ut vitae lacus 
-                    et nisl sollicitudin imperdiet id a mi.
-                </p>
-                <ul class="listinginfoprofile">
-                    <li>
-                        <div class="title">
-                            Father Name:
-                        </div>
-                        <div class="titleanswer">
-                            John Smith
-                        </div>
-                    </li>
-                    <li>
-                        <div class="title">
-                            Ideal Age:
-                        </div>
-                        <div class="titleanswer">
-                            2 - 3 Years
-                        </div>
-                    </li>
-                    <li>
-                        <div class="title">
-                            Mother Name:
-                        </div>
-                        <div class="titleanswer">
-                            Herry Smith
-                        </div>
-                    </li>
-                    <li>
-                        <div class="title">
-                            Travel Enthusiaste:
-                        </div>
-                        <div class="titleanswer">
-                            John Smith
-                        </div>
-                    </li>
-                    <li>
-                        <div class="title">
-                            City:
-                        </div>
-                        <div class="titleanswer">
-                            Toronto
-                        </div>
-                    </li>
-                    <li>
-                        <div class="title">
-                            Single Parent:
-                        </div>
-                        <div class="titleanswer">
-                            N/A
-                        </div>
-                    </li>
-                    <li>
-                        <div class="title">
-                            State:
-                        </div>
-                        <div class="titleanswer">
-                            Ontario
-                        </div>
-                    </li>
-                    <li>
-                        <div class="title">
-                            Interested in Meetups:
-                        </div>
-                        <div class="titleanswer">
-                            NO
-                        </div>
-                    </li>
-                    <li>
-                        <div class="title">
-                            Country:
-                        </div>
-                        <div class="titleanswer">
-                            Canada
-                        </div>
-                    </li>
-                    <li>
-                        <div class="title">
-                            LGBTQ+:
-                        </div>
-                        <div class="titleanswer">
-                            N/A
-                        </div>
-                    </li>
-                    <li>
-                        <div class="title">
-                            Disability:
-                        </div>
-                        <div class="titleanswer">
-                            N/A
-                        </div>
-                    </li>
+                <div class="bioinfo">
+                    <h2>
+                        Bio
+                    </h2>
+                    <p>
+                        Nullam et ornare elit, quis maximus nibh. Aenean sed 
+                        magna eget enim pharetra consectetur et eu magna. 
+                        Nunc dui leo, pretium quis eros non, tincidunt finibus 
+                        odio. Aenean tempus ut neque vel dapibus. Vivamus 
+                        vehicula quis sapien nec sollicitudin. Ut vitae lacus 
+                        et nisl sollicitudin imperdiet id a mi.
+                    </p>
+                    <ul class="listinginfoprofile">
+                        <li>
+                            <div class="title">
+                                Father Name:
+                            </div>
+                            <div class="titleanswer">
+                                John Smith
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">
+                                Ideal Age:
+                            </div>
+                            <div class="titleanswer">
+                                2 - 3 Years
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">
+                                Mother Name:
+                            </div>
+                            <div class="titleanswer">
+                                Herry Smith
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">
+                                Travel Enthusiaste:
+                            </div>
+                            <div class="titleanswer">
+                                John Smith
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">
+                                City:
+                            </div>
+                            <div class="titleanswer">
+                                Toronto
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">
+                                Single Parent:
+                            </div>
+                            <div class="titleanswer">
+                                N/A
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">
+                                State:
+                            </div>
+                            <div class="titleanswer">
+                                Ontario
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">
+                                Interested in Meetups:
+                            </div>
+                            <div class="titleanswer">
+                                NO
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">
+                                Country:
+                            </div>
+                            <div class="titleanswer">
+                                Canada
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">
+                                LGBTQ+:
+                            </div>
+                            <div class="titleanswer">
+                                N/A
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">
+                                Disability:
+                            </div>
+                            <div class="titleanswer">
+                                N/A
+                            </div>
+                        </li>
 
-                </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="friendslist">
+            <div class="friendlisthandler">
+                <div class="titlecount">
+                    <h4>
+                        Your Friends 
+                        <span>(38)</span>
+                    </h4>
+                </div>
+                <div class="seeallmain">
+                    <a class="seeall" href="#">See All</a>
+                </div>
+            </div>
+            <div class="listingmainfrineds">
+                <div class="frndlistitem active">
+                    <div class="pre_img">
+                        <img src="./src/images/listitem1.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>
+                            Acacia Silverman
+                        </h3>
+                        <p>
+                            Active Now
+                        </p>
+                    </div>
+                </div>
+                <div class="frndlistitem">
+                    <div class="pre_img">
+                        <img src="./src/images/listitem1.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>
+                            Acacia Silverman
+                        </h3>
+                        <p>
+                            Active 3hrs ago
+                        </p>
+                    </div>
+                </div>
+                <div class="frndlistitem active">
+                    <div class="pre_img">
+                        <img src="./src/images/listitem1.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>
+                            Acacia Silverman
+                        </h3>
+                        <p>
+                            Active Now
+                        </p>
+                    </div>
+                </div>
+                <div class="frndlistitem">
+                    <div class="pre_img">
+                        <img src="./src/images/listitem1.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>
+                            Acacia Silverman
+                        </h3>
+                        <p>
+                            Active 3hrs ago
+                        </p>
+                    </div>
+                </div>
+                <div class="frndlistitem active">
+                    <div class="pre_img">
+                        <img src="./src/images/listitem1.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>
+                            Acacia Silverman
+                        </h3>
+                        <p>
+                            Active Now
+                        </p>
+                    </div>
+                </div>
+                <div class="frndlistitem">
+                    <div class="pre_img">
+                        <img src="./src/images/listitem1.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>
+                            Acacia Silverman
+                        </h3>
+                        <p>
+                            Active 3hrs ago
+                        </p>
+                    </div>
+                </div>
+                <div class="frndlistitem active">
+                    <div class="pre_img">
+                        <img src="./src/images/listitem1.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>
+                            Acacia Silverman
+                        </h3>
+                        <p>
+                            Active Now
+                        </p>
+                    </div>
+                </div>
+                <div class="frndlistitem">
+                    <div class="pre_img">
+                        <img src="./src/images/listitem1.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>
+                            Acacia Silverman
+                        </h3>
+                        <p>
+                            Active 3hrs ago
+                        </p>
+                    </div>
+                </div>
+                <div class="frndlistitem active">
+                    <div class="pre_img">
+                        <img src="./src/images/listitem1.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>
+                            Acacia Silverman
+                        </h3>
+                        <p>
+                            Active Now
+                        </p>
+                    </div>
+                </div>
+                <div class="frndlistitem">
+                    <div class="pre_img">
+                        <img src="./src/images/listitem1.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>
+                            Acacia Silverman
+                        </h3>
+                        <p>
+                            Active 3hrs ago
+                        </p>
+                    </div>
+                </div>
+                <div class="frndlistitem active">
+                    <div class="pre_img">
+                        <img src="./src/images/listitem1.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>
+                            Acacia Silverman
+                        </h3>
+                        <p>
+                            Active Now
+                        </p>
+                    </div>
+                </div>
+                <div class="frndlistitem">
+                    <div class="pre_img">
+                        <img src="./src/images/listitem1.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>
+                            Acacia Silverman
+                        </h3>
+                        <p>
+                            Active 3hrs ago
+                        </p>
+                    </div>
+                </div>
+                <div class="frndlistitem active">
+                    <div class="pre_img">
+                        <img src="./src/images/listitem1.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>
+                            Acacia Silverman
+                        </h3>
+                        <p>
+                            Active Now
+                        </p>
+                    </div>
+                </div>
+                <div class="frndlistitem">
+                    <div class="pre_img">
+                        <img src="./src/images/listitem1.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>
+                            Acacia Silverman
+                        </h3>
+                        <p>
+                            Active 3hrs ago
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="friendslist">
-        <div class="friendlisthandler">
-            <div class="titlecount">
-                <h4>
-                    Your Friends 
-                    <span>(38)</span>
-                </h4>
-            </div>
-            <div class="seeallmain">
-                <a class="seeall" href="#">See All</a>
-            </div>
-        </div>
-        <div class="listingmainfrineds">
-            <div class="frndlistitem active">
-                <div class="pre_img">
-                    <img src="./src/images/listitem1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>
-                        Acacia Silverman
-                    </h3>
-                    <p>
-                        Active Now
-                    </p>
-                </div>
-            </div>
-            <div class="frndlistitem">
-                <div class="pre_img">
-                    <img src="./src/images/listitem1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>
-                        Acacia Silverman
-                    </h3>
-                    <p>
-                        Active 3hrs ago
-                    </p>
-                </div>
-            </div>
-            <div class="frndlistitem active">
-                <div class="pre_img">
-                    <img src="./src/images/listitem1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>
-                        Acacia Silverman
-                    </h3>
-                    <p>
-                        Active Now
-                    </p>
-                </div>
-            </div>
-            <div class="frndlistitem">
-                <div class="pre_img">
-                    <img src="./src/images/listitem1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>
-                        Acacia Silverman
-                    </h3>
-                    <p>
-                        Active 3hrs ago
-                    </p>
-                </div>
-            </div>
-            <div class="frndlistitem active">
-                <div class="pre_img">
-                    <img src="./src/images/listitem1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>
-                        Acacia Silverman
-                    </h3>
-                    <p>
-                        Active Now
-                    </p>
-                </div>
-            </div>
-            <div class="frndlistitem">
-                <div class="pre_img">
-                    <img src="./src/images/listitem1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>
-                        Acacia Silverman
-                    </h3>
-                    <p>
-                        Active 3hrs ago
-                    </p>
-                </div>
-            </div>
-            <div class="frndlistitem active">
-                <div class="pre_img">
-                    <img src="./src/images/listitem1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>
-                        Acacia Silverman
-                    </h3>
-                    <p>
-                        Active Now
-                    </p>
-                </div>
-            </div>
-            <div class="frndlistitem">
-                <div class="pre_img">
-                    <img src="./src/images/listitem1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>
-                        Acacia Silverman
-                    </h3>
-                    <p>
-                        Active 3hrs ago
-                    </p>
-                </div>
-            </div>
-            <div class="frndlistitem active">
-                <div class="pre_img">
-                    <img src="./src/images/listitem1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>
-                        Acacia Silverman
-                    </h3>
-                    <p>
-                        Active Now
-                    </p>
-                </div>
-            </div>
-            <div class="frndlistitem">
-                <div class="pre_img">
-                    <img src="./src/images/listitem1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>
-                        Acacia Silverman
-                    </h3>
-                    <p>
-                        Active 3hrs ago
-                    </p>
-                </div>
-            </div>
-            <div class="frndlistitem active">
-                <div class="pre_img">
-                    <img src="./src/images/listitem1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>
-                        Acacia Silverman
-                    </h3>
-                    <p>
-                        Active Now
-                    </p>
-                </div>
-            </div>
-            <div class="frndlistitem">
-                <div class="pre_img">
-                    <img src="./src/images/listitem1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>
-                        Acacia Silverman
-                    </h3>
-                    <p>
-                        Active 3hrs ago
-                    </p>
-                </div>
-            </div>
-            <div class="frndlistitem active">
-                <div class="pre_img">
-                    <img src="./src/images/listitem1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>
-                        Acacia Silverman
-                    </h3>
-                    <p>
-                        Active Now
-                    </p>
-                </div>
-            </div>
-            <div class="frndlistitem">
-                <div class="pre_img">
-                    <img src="./src/images/listitem1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>
-                        Acacia Silverman
-                    </h3>
-                    <p>
-                        Active 3hrs ago
-                    </p>
-                </div>
-            </div>
-        </div>
+    <div class="mobile-overlay">
+
     </div>
-   </div>
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./src/js/main.js"></script>
 </body>

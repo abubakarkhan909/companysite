@@ -97,3 +97,15 @@
         }
     }
 }
+
+@media screen and (max-width:1200px) {
+    .frndlistitem .content {
+        padding-left: 13px;
+    }
+    .listingmainfrineds {
+        margin-top: 20px;
+        gap: 20px;
+        padding: 20px 15px 20px;
+        height: calc(100vh - 82px);
+    }
+}

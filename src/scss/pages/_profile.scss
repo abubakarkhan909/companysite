@@ -7,7 +7,7 @@
     max-height: 35vh;
     min-height: 250px;
     width: 100%;
-    background-size: cover;
+    background-size: cover !important;
     position: relative;
    
     &::before{
@@ -173,6 +173,59 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: top center;
+        }
+    }
+}
+
+@media screen and  (max-width:1363px) {
+    .profileicon_info{
+        padding: 0 20px;
+    }
+    .profileicon_info{
+        .profileicon_in .profileoicon {
+            width: 165px;
+            height: 165px;
+        }
+    }
+    .profileicon_info .profileicon_in .profile_content {
+        width: calc(100% - 180px);
+        margin-left: 15px;
+        padding-top: 93px;
+    }
+    .bg_img {
+        height: 220px;
+        max-height: 30vh;
+        min-height: 220px;
+    }
+    .profileicon_info .profileicon_in .profile_text h3 {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 8px;
+    }
+    .bioinfo {
+        border-radius: 8px;
+        padding: 20px;
+        margin:25px 20px;
+    }
+    .bioinfo .listinginfoprofile li .titleanswer {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+@media screen and (max-width:768px) {
+    .bioinfo .listinginfoprofile li{
+        width: 100%;
+
+    }
+}
+@media screen and (max-width:576px) {
+    .profileicon_info .profileicon_in{
+        flex-direction: column;
+        align-items: flex-start;
+        .profile_content{
+            width: 100%;
+            padding-top: 0;
+            margin-left: 0;
         }
     }
 }

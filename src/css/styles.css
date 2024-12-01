@@ -214,6 +214,70 @@ button, .navbar-toggler:focus {
   background-color: #E4F5FF;
 }
 
+@media screen and (max-width: 1363px) {
+  .onemain {
+    grid-template-columns: 280px 1fr 360px;
+  }
+  .onemain .friendslist {
+    padding: 40px 20px;
+  }
+  .onemain .centeredarea .inner_centerdmain {
+    padding: 40px 20px 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .onemain {
+    grid-template-columns: repeat(1, 1fr);
+    position: relative;
+    overflow: hidden;
+  }
+  .onemain .sidenavbar {
+    padding: 20px 20px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    transition: left 0.4s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+  }
+  .onemain .sidenavbar.active {
+    left: 0;
+  }
+  .onemain .friendslist {
+    padding: 25px 20px 20px;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    transition: right 0.4s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+  }
+  .onemain .friendslist.active {
+    right: 0;
+  }
+  .onemain .centeredarea .inner_centerdmain {
+    padding: 20px 20px 0;
+  }
+  .mobile-overlay {
+    display: none;
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  .mobile-overlay.active {
+    display: block;
+    opacity: 1;
+  }
+}
 .profile_main {
   height: 100vh;
   overflow-y: auto;
@@ -224,7 +288,7 @@ button, .navbar-toggler:focus {
   max-height: 35vh;
   min-height: 250px;
   width: 100%;
-  background-size: cover;
+  background-size: cover !important;
   position: relative;
 }
 .bg_img::before {
@@ -383,6 +447,55 @@ button, .navbar-toggler:focus {
   background-position: top center;
 }
 
+@media screen and (max-width: 1363px) {
+  .profileicon_info {
+    padding: 0 20px;
+  }
+  .profileicon_info .profileicon_in .profileoicon {
+    width: 165px;
+    height: 165px;
+  }
+  .profileicon_info .profileicon_in .profile_content {
+    width: calc(100% - 180px);
+    margin-left: 15px;
+    padding-top: 93px;
+  }
+  .bg_img {
+    height: 220px;
+    max-height: 30vh;
+    min-height: 220px;
+  }
+  .profileicon_info .profileicon_in .profile_text h3 {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 8px;
+  }
+  .bioinfo {
+    border-radius: 8px;
+    padding: 20px;
+    margin: 25px 20px;
+  }
+  .bioinfo .listinginfoprofile li .titleanswer {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .bioinfo .listinginfoprofile li {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .profileicon_info .profileicon_in {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .profileicon_info .profileicon_in .profile_content {
+    width: 100%;
+    padding-top: 0;
+    margin-left: 0;
+  }
+}
 .friendlisthandler {
   display: flex;
   justify-content: space-between;
@@ -469,6 +582,17 @@ button, .navbar-toggler:focus {
   color: #24CE7B;
 }
 
+@media screen and (max-width: 1200px) {
+  .frndlistitem .content {
+    padding-left: 13px;
+  }
+  .listingmainfrineds {
+    margin-top: 20px;
+    gap: 20px;
+    padding: 20px 15px 20px;
+    height: calc(100vh - 82px);
+  }
+}
 .sidenavbar .logo {
   padding-bottom: 40px;
 }
@@ -648,6 +772,21 @@ button, .navbar-toggler:focus {
   gap: 8px;
 }
 
+@media screen and (max-width: 576px) {
+  .item_rec {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .item_rec .profilemain {
+    width: 100%;
+  }
+  .item_rec .buttonslist {
+    margin-top: 15px;
+    margin-left: auto;
+    width: calc(100% - 72px);
+    flex-wrap: wrap;
+  }
+}
 .searching {
   padding-bottom: 36px;
   border-bottom: 1px solid rgba(50, 70, 82, 0.2196078431);
@@ -1049,6 +1188,78 @@ button, .navbar-toggler:focus {
 
 .hidden {
   display: none;
+}
+
+header {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  padding-bottom: 0;
+}
+header .logohere img {
+  width: 50px;
+  height: 50px;
+}
+header a {
+  display: inline-block;
+}
+
+#toggle {
+  width: 28px;
+  height: 30px;
+  margin: 10px auto;
+}
+
+.togglemenu {
+  width: 26px;
+}
+
+.togglemenu div {
+  width: 100%;
+  height: 5px;
+  background: #000;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+  margin: 4px 0;
+}
+
+.togglemenu.on .one {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.togglemenu.on .two {
+  opacity: 0;
+}
+
+.togglemenu.on .three {
+  transform: rotate(-45deg) translate(7px, -8px);
+}
+
+.frindlistbtn {
+  position: fixed;
+  right: 0;
+  top: 240px;
+  padding: 9px 8px 9px 12px;
+  background: red;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #FF0101;
+  z-index: 2;
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  header {
+    display: flex;
+  }
+  .frindlistbtn {
+    display: block;
+    transition: right 0.4s ease;
+  }
+  .frindlistbtn.active {
+    right: 300px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

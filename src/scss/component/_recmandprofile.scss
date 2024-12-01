@@ -81,3 +81,18 @@
         gap: 8px;
     }
 }
+@media screen and (max-width:576px) {
+    .item_rec {
+        flex-direction: column;
+        align-items: flex-start;
+        .profilemain{
+            width: 100%;
+        }
+        .buttonslist{
+            margin-top: 15px;
+            margin-left: auto;
+            width: calc(100% - 72px);
+            flex-wrap: wrap;
+        }
+    }
+} 

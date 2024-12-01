@@ -149,8 +149,9 @@
     }
 }
 .progressteps{
-    p{margin: 0;}
     width: 100%;
+    p{margin: 0;}
+    
     .progress-container{
         display: flex;
         justify-content: space-between;

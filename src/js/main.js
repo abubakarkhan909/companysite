@@ -267,3 +267,25 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function () {
+  $("#toggle").click(function (e) {
+    e.preventDefault(); 
+    $(this).find(".togglemenu").toggleClass("on");
+    $(".sidenavbar").toggleClass("active"); 
+    $(".mobile-overlay").toggleClass("active");
+  });
+  $(".frindlistbtn").click(function (e) {
+    e.preventDefault(); 
+    $(this).toggleClass("active");
+    $(".friendslist").toggleClass("active"); 
+    $(".mobile-overlay").toggleClass("active");
+  });
+  $(".mobile-overlay").click(function (e) {
+    e.preventDefault(); 
+    $(".friendslist").removeClass("active"); 
+    $(this).removeClass("active");
+    $(".frindlistbtn").removeClass("active");
+    $("#toggle").find(".togglemenu").removeClass("on");
+    $(".sidenavbar").removeClass("active"); 
+  });
+});
