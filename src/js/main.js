@@ -196,9 +196,13 @@ $(document).ready(function () {
       openModal("#otpModal");
   });
 
-  $(".open-new-password").on("click", function (e) {
+  $(".newpasswordadd").on("click", function (e) {
     e.preventDefault(); 
       openModal("#newPasswordModal");
+  });
+  $(".otpscreen").on("click", function (e) {
+    e.preventDefault(); 
+      openModal("#otpModal");
   });
 
   $(".close-btn").on("click", function () {
@@ -208,7 +212,6 @@ $(document).ready(function () {
   $(window).on("click", function (e) {
    
       if ($(e.target).hasClass("modal")) {
-        console.log("test2")
           closeModal();
       }
   });
@@ -266,6 +269,20 @@ $(document).ready(function () {
       }
   });
 });
+$(document).ready(function () {
+  $(".toggle-password").on("click", function () {
+    const input = $(this).siblings(".password-input");
+    const type = input.attr("type") === "password" ? "text" : "password";
+    input.attr("type", type);
+    const img = $(this).find("img");
+    if (type === "text") {
+      img.attr("src", "./src/images/eye-slash.svg");
+    } else {
+      img.attr("src", "./src/images/eye.svg");
+    }
+  });
+});
+
 
 $(document).ready(function () {
   $("#toggle").click(function (e) {

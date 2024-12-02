@@ -1248,6 +1248,66 @@ button, .navbar-toggler:focus {
   display: none;
 }
 
+.otp-inputs {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0;
+}
+.otp-inputs .otp-input {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 1px solid rgba(50, 70, 82, 0.2196078431);
+  font-size: 22px;
+  font-weight: 400;
+  color: #324652;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 12px;
+  text-align: center;
+}
+
+.expiretime {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #324652;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.expiretime span {
+  font-weight: 700;
+  color: #FF0101;
+}
+
+.notrecievied {
+  text-align: center;
+}
+.notrecievied a {
+  display: inline-block;
+  margin: 20px 0 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #324652;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
 @media screen and (max-width: 768px) {
   .formmain {
     margin-top: 20px;

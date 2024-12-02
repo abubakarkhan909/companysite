@@ -47,7 +47,12 @@
             </div>
             <div class="input-group">
                 <label for="">Password <span class="required">*</span></label>
-                <input class="form-control" type="password" placeholder="**********" >
+                <div class="password-wrapper">
+                    <input class="form-control password-input" type="password" placeholder="*****" >
+                    <button type="button" class="toggle-password">
+                        <img src="./src/images/eye.svg" alt="show/hide">
+                    </button>
+                </div>
             </div>
             <div class="input-group">
                 <div class="forgetdiv">
@@ -93,11 +98,21 @@
             </div>
             <div class="input-group">
                 <label for="">Password <span class="required">*</span></label>
-                <input class="form-control" type="password" placeholder="**********" >
+                <div class="password-wrapper">
+                    <input class="form-control password-input" type="password" placeholder="*****" >
+                    <button type="button" class="toggle-password">
+                        <img src="./src/images/eye.svg" alt="show/hide">
+                    </button>
+                </div>
             </div>
             <div class="input-group">
                 <label for="">Confirm Password <span class="required">*</span></label>
-                <input class="form-control" type="password" placeholder="**********" >
+                <div class="password-wrapper">
+                    <input class="form-control password-input" type="password" placeholder="*****" >
+                    <button type="button" class="toggle-password">
+                        <img src="./src/images/eye.svg" alt="show/hide">
+                    </button>
+                </div>
             </div>
              <button class="btn btn_lg btn-secondary w-100 open-setprofile">
                 Create Account
@@ -387,7 +402,7 @@
 <!-- Forgot Password Modal -->
 <div id="forgotPasswordModal" class="modal" data-modal="forgot-password">
     <div class="modal-content">
-        <span class="close-btn">&times;</span>
+        <span class="close-btn"></span>
         <h2>Forgot password</h2>
         <p>
             Enter your email to reset your password.
@@ -397,7 +412,7 @@
                 <label for="">Email address <span class="required">*</span></label>
                 <input class="form-control" type="text" placeholder="example@gmail.com" >
             </div>
-             <button class="btn btn-secondary w-100 btn_lg">
+             <button class="btn btn-secondary w-100 btn_lg otpscreen">
                 Continue
                 <span>
                     <img src="./src/images/login.svg" alt="arrow">
@@ -410,21 +425,62 @@
 <!-- OTP Modal -->
 <div id="otpModal" class="modal" data-modal="otp">
     <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <h2>OTP Verification</h2>
-        <form>
-            <!-- OTP Form Fields -->
-        </form>
+        <span class="close-btn"></span>
+        <h2>Enter OPT</h2>
+        <p>
+            Enter the OTP we've just sent you by email.
+        </p>
+        <div class="otp-inputs">
+            <input type="text" maxlength="1" class="otp-input" />
+            <input type="text" maxlength="1" class="otp-input" />
+            <input type="text" maxlength="1" class="otp-input" />
+            <input type="text" maxlength="1" class="otp-input" />
+        </div>
+        <div class="expiretime">
+            OTP will expire in <span>52</span> seconds.
+        </div>
+        <button class="btn btn-secondary w-100 btn_lg newpasswordadd">
+            REsend
+        </button> 
+       <div class="notrecievied">
+            <a class="" href="#">Didn’t receive email?</a>
+       </div>
     </div>
 </div>
 
 <!-- New Password Modal -->
 <div id="newPasswordModal" class="modal" data-modal="new-password">
     <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <h2>Set New Password</h2>
-        <form>
-            <!-- New Password Form Fields -->
+        <span class="close-btn"></span>
+        <h2>Create new Password</h2>
+        <p>
+            Create a secure password with letters, numbers, and symbols for your account safety.
+        </p>
+        <form class="formmain">
+            <div class="input-group">
+                <label for="">Password <span class="required">*</span></label>
+                <div class="password-wrapper">
+                    <input class="form-control password-input" type="password" placeholder="*****" >
+                    <button type="button" class="toggle-password">
+                        <img src="./src/images/eye.svg" alt="show/hide">
+                    </button>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="">Confirm Password <span class="required">*</span></label>
+                <div class="password-wrapper">
+                    <input class="form-control password-input" type="password" placeholder="*****" >
+                    <button type="button" class="toggle-password">
+                        <img src="./src/images/eye.svg" alt="show/hide">
+                    </button>
+                </div>
+            </div>
+             <button class="btn btn-secondary w-100 btn_lg otpscreen">
+                Continue
+                <span>
+                    <img src="./src/images/login.svg" alt="arrow">
+                </span>
+             </button>            
         </form>
     </div>
 </div>
