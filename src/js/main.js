@@ -225,11 +225,14 @@ $(document).ready(function () {
       $(".step").addClass("hidden"); 
       $(`.step${step}`).removeClass("hidden"); 
       if (step === totalSteps) {
-        $("p.remaining").html("Last Question!"); 
+        $("p.remaining").html("Last Question!");
+        $("p.remaining").hide();
     } else {
-      $("p.remaining").html(
-        `Only <span class="remaingsteps">${step}</span> Questions Left!`
-    );
+        const remainingSteps = (totalSteps - 1) - step; // Calculate remaining steps
+        $("p.remaining").show();
+        $("p.remaining").html(
+            `Only <span class="remaingsteps">${remainingSteps}</span> Questions Left!`
+        );
     }
     updateProgress(step);
   }

@@ -951,6 +951,11 @@ button, .navbar-toggler:focus {
 .modal-content p strong {
   color: #516B7B;
 }
+.modal-content p span.note {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+}
 
 .close-btn {
   position: absolute;
@@ -1209,10 +1214,13 @@ button, .navbar-toggler:focus {
 }
 .ageselecter li {
   margin: 5px 5px;
+  position: relative;
 }
 .ageselecter li input[type=radio] {
   position: absolute;
   visibility: hidden;
+  width: 100%;
+  height: 100%;
 }
 .ageselecter li label {
   display: block;
