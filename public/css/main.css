@@ -329,7 +329,7 @@ header .headercontent .navbar ul .dropdown-menu .dropdownwithdropdown .innertab 
   content: "";
   width: 14px;
   height: 8px;
-  background: url("./../../src/images/arrowdown.svg") no-repeat center;
+  background: url("./../images/arrowdown.svg") no-repeat center;
   position: absolute;
   right: 0;
   transition: all 0.3s;
@@ -472,7 +472,7 @@ header .headercontent .navbar ul .dropdown-menu .solutionlist ul {
     content: "";
     width: 25px;
     height: 25px;
-    background: url("./../../src/images/chevron-down.svg") no-repeat center;
+    background: url("./../images/chevron-down.svg") no-repeat center;
     position: absolute;
     right: 0;
     transition: all 0.3s;
@@ -539,7 +539,7 @@ header .headercontent .navbar ul .dropdown-menu .solutionlist ul {
     top: 0;
     width: 1px;
     height: 100%;
-    background: url("./../../src/images/dotedline.svg") center;
+    background: url("./../images/dotedline.svg") center;
   }
   header .headercontent .navbar ul .dropdown-menu .dropdownwithdropdown .innertab ul .dropdownwithdropdownitem {
     opacity: 1;
@@ -761,7 +761,7 @@ header .headercontent .navbar ul .dropdown-menu .solutionlist ul {
   content: "";
   width: 18px;
   height: 8px;
-  background: url("./../../src/images/arrowdown.svg") no-repeat center;
+  background: url("./../images/arrowdown.svg") no-repeat center;
   position: absolute;
   right: 0;
   transition: all 0.3s;
@@ -833,7 +833,7 @@ header .headercontent .navbar ul .dropdown-menu .solutionlist ul {
   content: "";
   width: 25px;
   height: 25px;
-  background: url("./../../src/images/chevron-down.svg") no-repeat center;
+  background: url("./../images/chevron-down.svg") no-repeat center;
   position: absolute;
   right: 0;
   transition: all 0.3s;
@@ -879,7 +879,7 @@ header .headercontent .navbar ul .dropdown-menu .solutionlist ul {
   top: 0;
   width: 1px;
   height: 100%;
-  background: url("./../../src/images/dotedline.svg") center;
+  background: url("./../images/dotedline.svg") center;
   filter: brightness(0) invert(1);
 }
 .mobileheader .navbar_mob ul .dropdown-menu .dropdownwithdropdown .innertab ul .dropdownwithdropdownitem {
