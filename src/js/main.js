@@ -1,311 +1,179 @@
 $(document).ready(function () {
-    const userName = "Jimmie"; 
-    const dummyData = [
-      {
-        name: "Acacia Silverman",
-        distance: "1 Km Away",
-        image: "./src/images/listitem1.png",
-      },
-      {
-        name: "Ben Oakfield",
-        distance: "2 Km Away",
-        image: "./src/images/listitem2.png",
-      },
-      {
-        name: "Chloe Pinewood",
-        distance: "3 Km Away",
-        image: "./src/images/listitem3.png",
-      },
-      {
-        name: "Acacia Silverman",
-        distance: "1 Km Away",
-        image: "./src/images/listitem1.png",
-      },
-      {
-        name: "Ben Oakfield",
-        distance: "2 Km Away",
-        image: "./src/images/listitem2.png",
-      },
-      {
-        name: "Chloe Pinewood",
-        distance: "3 Km Away",
-        image: "./src/images/listitem3.png",
-      },
-      {
-        name: "Acacia Silverman",
-        distance: "1 Km Away",
-        image: "./src/images/listitem1.png",
-      },
-      {
-        name: "Ben Oakfield",
-        distance: "2 Km Away",
-        image: "./src/images/listitem2.png",
-      },
-      {
-        name: "Chloe Pinewood",
-        distance: "3 Km Away",
-        image: "./src/images/listitem3.png",
-      },
-      {
-        name: "Acacia Silverman",
-        distance: "1 Km Away",
-        image: "./src/images/listitem1.png",
-      },
-      {
-        name: "Ben Oakfield",
-        distance: "2 Km Away",
-        image: "./src/images/listitem2.png",
-      },
-      {
-        name: "Chloe Pinewood",
-        distance: "3 Km Away",
-        image: "./src/images/listitem3.png",
-      },
-      {
-        name: "Acacia Silverman",
-        distance: "1 Km Away",
-        image: "./src/images/listitem1.png",
-      },
-      {
-        name: "Ben Oakfield",
-        distance: "2 Km Away",
-        image: "./src/images/listitem2.png",
-      },
-      {
-        name: "Chloe Pinewood",
-        distance: "3 Km Away",
-        image: "./src/images/listitem3.png",
-      },
-    ];
-  
-    function renderList(data) {
-      const $nearbyList = $("#nearby-list");
-      $nearbyList.empty();
-      data.forEach((item) => {
-        const listItem = `
-          <li>
-            <div class="item_rec">
-              <div class="profilemain">
-                <div class="pre_img">
-                  <img src="${item.image}" alt="">
-                </div>
-                <div class="content">
-                  <h3>${item.name}</h3>
-                  <p>
-                    <span>
-                      <img src="./src/images/locationicon.svg" alt="">
-                    </span>
-                    ${item.distance}
-                  </p>
-                </div>
-              </div>
-              <div class="buttonslist">
-                <a href="#" class="btn btn-outline-primary">See profile</a>
-                <a href="#" class="btn btn-secondary">Let's chat</a>
-              </div>
-            </div>
-          </li>`;
-        $nearbyList.append(listItem);
-      });
-    }
-  
-    $("#welcome-text").text(`Welcome ${userName}`);
-    renderList(dummyData);
-  
-    $("#search-box").on("input", function () {
-      const query = $(this).val().toLowerCase();
-      const filteredResults = dummyData.filter((item) =>
-        item.name.toLowerCase().includes(query)
-      );
-      renderList(filteredResults);
-      if (query) {
-        $("#welcome-text").text("Search Families");
-        $("#recommendation-text").hide();
-        $("#clear-btn").show();
-        $(".searching").addClass("searchactive");
+  function handleHoverEffect() {
+      if (window.innerWidth > 992) { // Only run on screens larger than 991px
+          $('.dropdown').hover(
+              function () {
+                  $('.headercontent').addClass('menu-open');
+              },
+              function () {
+                  setTimeout(() => {
+                      if (!$('.dropdown:hover, .dropdown-menu:hover').length) {
+                          $('.headercontent').removeClass('menu-open');
+                      }
+                  }, 200);
+              }
+          );
+
+          $('.dropdown-menu').mouseleave(function () {
+              setTimeout(() => {
+                  if (!$('.dropdown:hover, .dropdown-menu:hover').length) {
+                      $('.headercontent').removeClass('menu-open');
+                  }
+              }, 200);
+          });
       } else {
-        $("#welcome-text").text(`Welcome ${userName}`);
-        $("#recommendation-text").show();
-        $("#clear-btn").hide();
-        $(".searching").removeClass("searchactive");
+          // Remove hover effects for mobile
+          $('.dropdown').off('mouseenter mouseleave');
+          $('.dropdown-menu').off('mouseleave');
+          $('.headercontent').removeClass('menu-open');
       }
-    });
-  
-    $("#clear-btn").on("click", function () {
-      $("#search-box").val("");
-      $("#clear-btn").hide();
-      $(".searching").removeClass("searchactive");
-      $("#welcome-text").text(`Welcome ${userName}`);
-      $("#recommendation-text").show();
-      renderList(dummyData); 
-    });
-  });
-function readURL(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        reader.onload = function(e) {
-            $('#imagePreview').css('background-image', 'url('+e.target.result +')');
-            $('#imagePreview').hide();
-            $('#imagePreview').fadeIn(650);
-        }
-        reader.readAsDataURL(input.files[0]);
-    }
-}
-$("#imageUpload").change(function() {
-    readURL(this);
-});
-  
-$(document).ready(function () {
-  // Function to open a modal
-  function openModal(modalId) {
-      $(".modal").hide(); // Hide all modals
-      $(modalId).fadeIn(); // Show the requested modal
   }
+  handleHoverEffect();
 
-  // Function to close a modal
-  function closeModal() {
-      $(".modal").fadeOut();
-  }
-
-  // Open specific modals
-  $(".open-login").on("click", function (e) {
-      e.preventDefault(); 
-      openModal("#loginModal");
-  });
-
-  $(".open-signup").on("click", function (e) {
-      e.preventDefault(); 
-      openModal("#signupModal");
-  });
-  $(".open-setprofile").on("click", function (e) {
-    e.preventDefault(); 
-    openModal("#setprofileModal");
-  });
-  $(".open-profile").on("click", function (e) {
-    e.preventDefault(); 
-      openModal("#profileModal");
-  });
-
-  $(".open-forgot-password").on("click", function (e) {
-    e.preventDefault(); 
-      openModal("#forgotPasswordModal");
-  });
-
-  $(".open-otp").on("click", function (e) {
-    e.preventDefault(); 
-      openModal("#otpModal");
-  });
-
-  $(".newpasswordadd").on("click", function (e) {
-    e.preventDefault(); 
-      openModal("#newPasswordModal");
-  });
-  $(".otpscreen").on("click", function (e) {
-    e.preventDefault(); 
-      openModal("#otpModal");
-  });
-
-  $(".close-btn").on("click", function () {
-      closeModal();
-  });
-
-  $(window).on("click", function (e) {
-   
-      if ($(e.target).hasClass("modal")) {
-          closeModal();
-      }
-  });
+  $(window).resize(handleHoverEffect);
 });
 
-
 $(document).ready(function () {
-  let currentStep = 1; 
-  const totalSteps = $(".step").length;
-  function showStep(step) {
-      $(".step").addClass("hidden"); 
-      $(`.step${step}`).removeClass("hidden"); 
-      if (step === totalSteps) {
-        $("p.remaining").html("Last Question!");
-        $("p.remaining").hide();
-    } else {
-        const remainingSteps = (totalSteps - 1) - step; // Calculate remaining steps
-        $("p.remaining").show();
-        $("p.remaining").html(
-            `Only <span class="remaingsteps">${remainingSteps}</span> Questions Left!`
-        );
-    }
-    updateProgress(step);
+  
+  function isMobile() {
+      return window.innerWidth <= 992; 
   }
-  function updateProgress(step) {
-      const progressPercentage = ((step - 1) / (totalSteps - 1)) * 100;
-      $("#progress").css("width", `${progressPercentage}%`);
+  $('.dropdownwithdropdownitem').click(function (e) {
+    e.preventDefault();
+      
+      var tagid = $(this).data('tag');
+      var $innertab = $(this).closest('.innertab');
+      if (isMobile()) {
+        console.log("mobile hit");
+          $(".dropdownwithdropdownitem").removeClass("activelink");
+         
+          var $list = $(this).next('.list');
+          $('.list').not($list).slideUp().addClass('hide').prev('.dropdownwithdropdownitem').removeClass("activelink");
+          $(this).toggleClass("activelink");
+          $list.slideToggle().toggleClass('hide');
+          if ($list.hasClass('hide')) {
+            $(this).removeClass("activelink");
+            $innertab.removeClass("opendrop");
+          }else{
+            $innertab.addClass("opendrop");
+          }
+          if (!$('.dropdownwithdropdownitem.activelink').length) {
+            $('.innertab').removeClass("opendrop");
+          }
+      } else {
+        console.log("desktop hit");
+          $(".dropdownwithdropdownitem").removeClass("activelink");
+          $(this).addClass("activelink");
+          $('.tab-content .list').addClass('hide'); 
+          $('#'+tagid+'-desktop').removeClass('hide'); 
+      }
+  });
 
-      $(".circle").each(function (index) {
-          if (index < step) {
-              $(this).addClass("active");
-          } else {
-              $(this).removeClass("active");
+  $(window).resize(function () {
+      if (!isMobile()) {
+          $('.list').hide().addClass('hide'); 
+      }
+  });
+
+  const body = document.body;
+  const toggleBtn = document.getElementById('toggleBtn');
+  const navLinks = document.getElementById('nav-links');
+  const line1 = document.getElementById('line-1');
+  const line2 = document.getElementById('line-2');
+
+  window.toggleNav = function() {
+      const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+      toggleBtn.setAttribute('aria-expanded', !isExpanded);
+      navLinks.classList.toggle('nav--active');
+      line1.classList.toggle('forward');
+      line2.classList.toggle('backward');
+      document.body.classList.toggle('blurred', !isExpanded);
+      $(".headercontent").toggleClass("menu-open");
+  };
+});
+$(document).ready(function () {
+  function isMobileView() {
+      return window.innerWidth <= 992;
+  }
+
+  function mobileDropdownHandler() {
+      if (!isMobileView()) return; 
+      $('.dropdown .navbaritem').off('click').on('click', function (event) {
+          event.preventDefault(); 
+          let $dropdown = $(this).closest('.dropdown');
+          $dropdown.toggleClass('active');
+          $dropdown.find('.dropdown-menu').slideToggle(200);
+          $('.dropdown').not($dropdown).removeClass('active').find('.dropdown-menu').slideUp(200);
+          $(".dropdownwithdropdownitem").removeClass("activelink");
+      });
+      $(document).off('click').on('click', function (event) {
+          if (!isMobileView()) return;
+          if (!$(event.target).closest('.dropdown').length) {
+              $('.dropdown').removeClass('active');
+              $('.dropdown-menu').slideUp(200);
           }
       });
   }
-  showStep(currentStep);
-  $(document).on("click", "#next", function (e) {
-      e.preventDefault();
-      if (currentStep < totalSteps) {
-          currentStep++;
-          showStep(currentStep);
-      }
-  });
-  $(document).on("click", "#prev", function (e) {
-      e.preventDefault();
-      
-      if (currentStep > 1) {
-          currentStep--;
-          showStep(currentStep);
-      }
-  });
-  $(document).on("click", "#skip", function (e) {
-      e.preventDefault();
-      if (currentStep < totalSteps) {
-          currentStep++;
-          showStep(currentStep);
-      }
+  mobileDropdownHandler();
+  $(window).resize(function () {
+      mobileDropdownHandler();
   });
 });
 $(document).ready(function () {
-  $(".toggle-password").on("click", function () {
-    const input = $(this).siblings(".password-input");
-    const type = input.attr("type") === "password" ? "text" : "password";
-    input.attr("type", type);
-    const img = $(this).find("img");
-    if (type === "text") {
-      img.attr("src", "./src/images/eye-slash.svg");
-    } else {
-      img.attr("src", "./src/images/eye.svg");
-    }
+  function isMobileheader() {
+      return $(window).width() <= 576;
+  }
+
+  let $previousShowLi = $("li.show");
+
+  $(".navmobitem").click(function (e) {
+      if (!isMobileheader()) return;
+      e.preventDefault();
+
+      var $li = $(this).parent("li");
+      var $dropdownMenu = $li.find(".dropdown-menu");
+      var hasDropdown = $dropdownMenu.length > 0; // Check if dropdown exists
+      var wasActive = $li.hasClass("active");
+
+      $("li").removeClass("active show");
+      $(".dropdown-menu").slideUp(300);
+      $(".navbar_mob").removeClass("open-dropdown"); // Always remove class first
+
+      if (wasActive) {
+          if ($previousShowLi.length) {
+              $previousShowLi.addClass("show");
+          }
+      } else {
+          $li.addClass("active");
+          $dropdownMenu.slideDown(300);
+          if (hasDropdown) {
+              $(".navbar_mob").addClass("open-dropdown"); // Only add if dropdown exists
+          }
+      }
+  });
+
+  $(document).click(function (e) {
+      if (!isMobileheader()) return;
+
+      if (!$(e.target).closest(".navmobitem, .dropdown-menu").length) {
+          $("li").removeClass("active");
+          $(".dropdown-menu").slideUp(300);
+          $(".navbar_mob").removeClass("open-dropdown"); // Remove class when clicking outside
+
+          if ($previousShowLi.length) {
+              $previousShowLi.addClass("show");
+          }
+      }
+  });
+
+  $(window).resize(function () {
+      if (!isMobileheader()) {
+          $("li").removeClass("active");
+          $(".dropdown-menu").hide();
+          $(".navbar_mob").removeClass("open-dropdown"); // Remove class on resize
+      }
   });
 });
 
 
-$(document).ready(function () {
-  $("#toggle").click(function (e) {
-    e.preventDefault(); 
-    $(this).find(".togglemenu").toggleClass("on");
-    $(".sidenavbar").toggleClass("active"); 
-    $(".mobile-overlay").toggleClass("active");
-  });
-  $(".frindlistbtn").click(function (e) {
-    e.preventDefault(); 
-    $(this).toggleClass("active");
-    $(".friendslist").toggleClass("active"); 
-    $(".mobile-overlay").toggleClass("active");
-  });
-  $(".mobile-overlay").click(function (e) {
-    e.preventDefault(); 
-    $(".friendslist").removeClass("active"); 
-    $(this).removeClass("active");
-    $(".frindlistbtn").removeClass("active");
-    $("#toggle").find(".togglemenu").removeClass("on");
-    $(".sidenavbar").removeClass("active"); 
-  });
-});
+

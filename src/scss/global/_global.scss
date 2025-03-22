@@ -1,5 +1,5 @@
 // _global.scss
-
+@use "variables" as *; 
 *{
   font-family: $font-family;
   color: $body-color;
@@ -20,58 +20,63 @@ body {
   height: 0;
 }
 h1,h2,h3,h4,h5,h6{
-  font-family: $font-family-bold;
-  font-weight: 700;
+  font-family: $font-family; 
   margin: 0;
-  color: $primary-color;
+  color: $white;
 }
-h3{
-  font-size: 30px;
-  line-height: 40px;
+h1{
+  font-size: 64px;
+  line-height: 70px;
 }
 p{
   font-family: $font-family;
   margin: 0;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 20px;
+  color: $white;
+}
+a {
+  color: $white;
+  text-decoration: none;
+  outline: none;
+  &:hover,&:focus{
+    text-decoration: none;
+    outline: none;  
+  }
+}
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.bg-light{
+  background-color: $light !important; 
+}
+.bg-light-color{
   color: $lightdark;
 }
-  a {
-    color: $secondary-color;
-    text-decoration: none;
-    outline: none;
-    &:hover,&:focus{
-      text-decoration: none;
-      outline: none; 
-    }
-  }
-  .bg-light{
-    background-color: $light !important; 
-  }
-  .bg-light-color{
-    color: $lightdark;
-  }
-  img{
-    max-width: 100%;
-    height: auto;
-  }
+img{
+  max-width: 100%;
+  height: auto;
+}
 .slick-slide {
     outline: none;
     padding-right: 15px;
     padding-left: 15px;
 }
 .container{
+  max-width: 1286px;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  @media screen and (min-width:1800px) {
+    max-width: 1760px;
+  }
+  @media screen and (max-width:992px) {
+      max-width: 744px;
+  }
 }
-.row > *{
-  padding: 0 15px;
-}
-.row {
-  margin-right: -15px !important;
-  margin-left: -15px !important;
-}
+
 .container-fluid {
   padding-right: 15px !important;
   padding-left: 15px !important;
@@ -81,28 +86,21 @@ p{
 
 .btn{
   box-shadow: none;
-  padding: 10px 22px;
-  border-radius: 5px;
+  padding: 18px 33px;
+  border-radius: 50px;
   border: 1px solid;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 17px;
-  border-radius: 75px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 100%;
   display: flex;
   align-items: center;
   width: fit-content;
   text-align: center;
   justify-content: center;
   cursor: pointer;
-  span{
+  span,img{
     margin-left: 10px;
     display: flex;
-  }
-  &.leftie{
-    span{
-      margin-left: 0px;
-      margin-right: 10px;
-    }
   }
   &.btn_lg{
     font-size: 20px;
@@ -110,24 +108,23 @@ p{
   }
 }
 .btn-primary{
-  background-color: $primary-color;
-  color: $white;
-  border-color: $primary-color;
+  background-color: $primary;
+  color: $black;
+  border-color: $primary;
   &:hover{
-    background-color: transparent;
-    border-color: $primary-color;
-    color: $primary-color;
-    
+    background-color: $primary_light;
+    border-color: $primary_light;
+    color: $black;
   }
 }
 .btn-outline-primary{
   background-color: transparent;
-  color: $primary-color;
-  border-color: $primary-color;
+  color: $primary;
+  border-color: $primary;
   &:hover{
-    background-color: $primary-color;
+    background-color: $primary;
     color: $white;
-    border-color: $primary-color;
+    border-color: $primary;
     span{
       img{
         filter: brightness(0) saturate(100%) invert(100%);
@@ -136,24 +133,18 @@ p{
   }
 }
 .btn-secondary{
-  background-color: $secondary-color;
+  background-color: $secondary;
   color: $white;
-  border-color: $secondary-color;
+  border-color: $secondary;
   font-weight: 700;
   span{
-    img{
-      filter: brightness(0) saturate(100%) invert(100%);
-    }
+ 
   }
   &:hover{
     background-color: transparent;
-    border-color: $secondary-color;
-    color: $secondary-color;
-    span{
-      img{
-        filter: brightness(0) saturate(100%) invert(24%) sepia(96%) saturate(6364%) hue-rotate(360deg) brightness(91%) contrast(101%);
-      }
-    }
+    border-color: $secondary;
+    color: $secondary;
+   
   }
 }
 button,.navbar-toggler:focus{
@@ -166,20 +157,25 @@ button,.navbar-toggler:focus{
   box-shadow: none;
   border: none;
   padding: 0;
-  color: $primary-color;
+  color: $primary;
   cursor: pointer;
 }
 
 .w-100{
   width: 100%;
 }
-.mt_42px{
-  margin-top: 42px;
-}
 .text-uppercase{
   text-transform: uppercase;
 }
-
+.hide{
+  display: none;
+}
+@media screen and (max-width:992px) {
+  .btn{
+    padding: 14px 26px;
+    font-size: 14px;
+  }
+}
 @media screen and (max-width:576px) {
   .btn{
     font-size: 13px;
