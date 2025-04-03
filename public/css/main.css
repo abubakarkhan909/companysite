@@ -89,7 +89,7 @@ img {
 .container.container_sm {
   max-width: 1074px;
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1700px) {
   .container {
     max-width: 1920px;
     padding: 0 100px;
@@ -251,7 +251,7 @@ button, .navbar-toggler:focus {
 }
 .proheading h2 span {
   font-weight: 700;
-  color: #E6B400;
+  color: #fff;
   margin-left: 5px;
 }
 .proheading h2::after {
@@ -263,7 +263,7 @@ button, .navbar-toggler:focus {
   bottom: 0;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1700px) {
   .btn {
     padding: 19px 42px;
     font-size: 16px;
@@ -321,16 +321,19 @@ button, .navbar-toggler:focus {
 header {
   z-index: 7;
   transition: background 1s ease;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   padding-top: 14px;
   border-top: 2px solid #B57D16;
 }
+header.sticky .headercontent {
+  background: rgba(0, 0, 0, 0.7);
+}
 header .headercontent {
   border: 1px solid rgba(220, 220, 220, 0.7);
-  background: rgba(255, 255, 255, 0.0705882353);
+  background: rgba(0, 0, 0, 0.07);
   backdrop-filter: blur(20px);
   padding: 0 12px;
   border-radius: 120px;
@@ -347,7 +350,7 @@ header .headercontent .navbar ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 28px;
 }
 header .headercontent .navbar ul .navbaritem {
   font-size: 20px;
@@ -363,10 +366,10 @@ header .headercontent .navbar ul .dropdown {
   cursor: pointer;
   padding: 26px 0;
 }
-header .headercontent .navbar ul .dropdown:hover .navbaritem {
+header .headercontent .navbar ul .dropdown:hover .navbaritem, header .headercontent .navbar ul .dropdown.active .navbaritem {
   color: #E6B400;
 }
-header .headercontent .navbar ul .dropdown:hover .dropdown-menu {
+header .headercontent .navbar ul .dropdown:hover .dropdown-menu, header .headercontent .navbar ul .dropdown.active .dropdown-menu {
   opacity: 1;
   transform: translateY(0px);
   display: flex;
@@ -380,7 +383,7 @@ header .headercontent .navbar ul .dropdown-menu {
   padding: 12px 12px 12px 28px;
   border: 1px solid rgba(220, 220, 220, 0.7);
   border-top: none;
-  background: rgba(41, 41, 41, 0.71);
+  background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(20px);
   left: -1px;
   border-radius: 0 0 28px 28px;
@@ -470,10 +473,10 @@ header .headercontent .navbar ul .dropdown-menu .dropdownwithdropdown .innertab 
   opacity: 1;
 }
 header .headercontent .navbar ul .dropdown-menu .dropdownwithdropdown .list {
-  display: none;
+  display: none !important;
 }
 header .headercontent .navbar ul .dropdown-menu .dropdownwithdropdown .list:not(.hide) {
-  display: block;
+  display: block !important;
 }
 header .headercontent .navbar ul .dropdown-menu .productslist {
   width: 100%;
@@ -496,6 +499,7 @@ header .headercontent .navbar ul .dropdown-menu .solutionlist ul {
 header .headercontent.menu-open {
   border-radius: 28px 28px 0 0;
   transition: none;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .mobile_toggleBtn {
@@ -538,7 +542,7 @@ header .headercontent.menu-open {
   transform-origin: 4px -0.5px;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1700px) {
   header {
     padding-top: 27px;
   }
@@ -551,7 +555,7 @@ header .headercontent.menu-open {
     padding-left: 0;
   }
   header .headercontent .navbar ul {
-    gap: 48px;
+    gap: 36px;
   }
   header .headercontent .navbar ul .navbaritem {
     font-size: 26px;
@@ -636,6 +640,7 @@ header .headercontent.menu-open {
   }
   header .headercontent .navbar.nav--active {
     display: block;
+    background: rgba(0, 0, 0, 0.7);
   }
   header .headercontent .navbar ul {
     flex-direction: column;
@@ -781,6 +786,7 @@ header .headercontent.menu-open {
 @media screen and (max-width: 576px) {
   header {
     padding-top: 24px;
+    position: absolute;
   }
   header .headercontent {
     border: none;
@@ -797,6 +803,9 @@ header .headercontent.menu-open {
   header .headercontent .navbar, header .headercontent .rightlinks, header .headercontent #toggleBtn {
     display: none;
   }
+  header.sticky .headercontent {
+    background: transparent;
+  }
 }
 @media screen and (min-width: 576px) {
   .mobileheader {
@@ -811,9 +820,9 @@ header .headercontent.menu-open {
 }
 .mobileheader .navbar_mob {
   border: none;
-  box-shadow: 0 0 0 1px rgba(204, 204, 204, 0.7);
+  box-shadow: 0 0 0 1px rgba(204, 204, 204, 0.4);
   border: none;
-  background: rgba(255, 255, 255, 0.0705882353);
+  background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(20px);
   padding: 10px;
   border-radius: 120px;
@@ -1177,7 +1186,7 @@ footer .footerinner .needhelp h2 {
 }
 footer .footerinner .needhelp h2 span {
   font-weight: 700;
-  color: #E6B400;
+  color: #fff;
 }
 footer .footerinner .footer_navbar {
   display: grid;
@@ -1292,7 +1301,7 @@ footer .footerinner .copyrights p a:hover {
   color: #E6B400;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1700px) {
   footer {
     padding: 180px 0 60px;
   }
@@ -1347,7 +1356,7 @@ footer .footerinner .copyrights p a:hover {
     right: -63px;
   }
 }
-@media screen and (max-width: 1775px) and (min-width: 1600px) {
+@media screen and (max-width: 1775px) and (min-width: 1700px) {
   footer .footerinner .footer_navbar {
     gap: 100px;
   }
@@ -1588,7 +1597,7 @@ footer .footerinner .copyrights p a:hover {
 }
 .mainbanner .content h1 span {
   font-weight: 700;
-  color: #E6B400;
+  color: #fff;
 }
 .mainbanner .graphics {
   position: relative;
@@ -1606,7 +1615,7 @@ footer .footerinner .copyrights p a:hover {
   padding-left: 20px;
   padding-right: 20px;
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1700px) {
   .mainbanner .brandslinked {
     max-width: 1760px;
     padding: 0 100px;
@@ -1634,7 +1643,7 @@ footer .footerinner .copyrights p a:hover {
   height: 100%;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1700px) {
   .mainbanner .content {
     padding: 277px 0 107px;
     max-width: 1209px;
@@ -1713,17 +1722,29 @@ footer .footerinner .copyrights p a:hover {
 
 .expertisecard {
   overflow: hidden;
-  padding: 1px;
+  padding: 0;
+  padding-bottom: 1.6px;
   border-radius: 32px;
-  background: linear-gradient(to left, #ffffff 0%, rgba(153, 153, 153, 0) 100%);
   position: relative;
   transition: background-position 1.5s ease-in-out;
+}
+.expertisecard::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(to left, #ffffff 0%, rgba(153, 153, 153, 0) 100%);
 }
 .expertisecard .expertisecardin {
   background-color: #242424;
   padding: 32px 36px;
   border-radius: 32px;
   height: 100%;
+  margin: 0.8px;
+  z-index: 1;
+  position: relative;
 }
 .expertisecard h3 {
   font-size: 24px;
@@ -1750,7 +1771,7 @@ footer .footerinner .copyrights p a:hover {
 .expertisecard a:hover h3 {
   color: #E6B400;
 }
-.expertisecard:nth-child(2n) {
+.expertisecard:nth-child(2n)::before {
   background: linear-gradient(to right, #ffffff 0%, rgba(153, 153, 153, 0) 100%);
 }
 .our_product {
@@ -1778,11 +1799,20 @@ footer .footerinner .copyrights p a:hover {
 
 .productscard {
   overflow: hidden;
-  padding: 1px;
+  padding: 0;
+  padding-bottom: 1.6px;
   border-radius: 32px;
-  background: linear-gradient(to top, #ffffff 0%, rgba(153, 153, 153, 0) 100%);
   position: relative;
   transition: background-position 1.5s ease-in-out;
+}
+.productscard::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(to top, #ffffff 0%, rgba(153, 153, 153, 0) 100%);
 }
 .productscard .productscardin {
   background-color: #242424;
@@ -1790,6 +1820,9 @@ footer .footerinner .copyrights p a:hover {
   border-radius: 32px;
   height: 100%;
   text-align: center;
+  margin: 0.8px;
+  z-index: 1;
+  position: relative;
 }
 .productscard img {
   max-width: 72px;
@@ -1802,7 +1835,7 @@ footer .footerinner .copyrights p a:hover {
   color: #fff;
   text-align: center;
 }
-.productscard:nth-child(n+4):nth-child(-n+6) {
+.productscard:nth-child(n+4):nth-child(-n+6)::before {
   background: linear-gradient(to bottom, #ffffff 0%, rgba(153, 153, 153, 0) 100%);
 }
 .productscard:hover h3 {
@@ -1826,7 +1859,7 @@ footer .footerinner .copyrights p a:hover {
     background: linear-gradient(360deg, #ffffff, rgba(153, 153, 153, 0));
   }
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1700px) {
   .our_expertise {
     padding: 66px 0 120px;
   }
@@ -1843,7 +1876,7 @@ footer .footerinner .copyrights p a:hover {
     border-radius: 60px;
   }
   .expertisecard .expertisecardin {
-    padding: 48px;
+    padding: 48px 44px;
     border-radius: 60px;
   }
   .expertisecard h3 {
@@ -1855,7 +1888,7 @@ footer .footerinner .copyrights p a:hover {
     margin-right: 36px;
   }
   .expertisecard p {
-    font-size: 22px;
+    font-size: 21px;
     line-height: 27px;
   }
   .our_product {
@@ -1869,7 +1902,7 @@ footer .footerinner .copyrights p a:hover {
   }
   .productscard .productscardin {
     border-radius: 60px;
-    padding: 36px 50px;
+    padding: 36px 45px;
   }
   .productscard img {
     max-width: 90px;
@@ -1877,6 +1910,14 @@ footer .footerinner .copyrights p a:hover {
   .productscard h3 {
     font-size: 32px;
     margin-top: 30px;
+  }
+}
+@media screen and (max-width: 1785px) and (min-width: 1700px) {
+  .productscard .productscardin {
+    padding: 36px 38px;
+  }
+  .productscard h3 {
+    font-size: 30px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -1933,6 +1974,11 @@ footer .footerinner .copyrights p a:hover {
     margin-top: 24px;
   }
 }
+@media screen and (max-width: 992px) and (min-width: 576px) {
+  .productscard:nth-child(4n-1)::before, .productscard:nth-child(4n)::before {
+    background: rgba(255, 255, 255, 0.6980392157) !important;
+  }
+}
 @media screen and (max-width: 576px) {
   .our_expertise {
     padding: 20px 0 40px;
@@ -1963,17 +2009,21 @@ footer .footerinner .copyrights p a:hover {
     margin: 0 -8px;
   }
   .our_expertise .experitesmain.slick-slider .slick-list {
-    padding: 0 20% 0 0 !important;
+    padding: 0 10% 0 0 !important;
   }
   .our_expertise .experitesmain.slick-slider .slick-slide {
     padding-right: 8px;
     padding-left: 8px;
   }
-  .our_expertise .experitesmain.slick-slider .slick-slide:nth-child(2n) .expertisecard {
+  .our_expertise .experitesmain.slick-slider .slick-slide:nth-child(2n) .expertisecard::before {
     background: linear-gradient(to right, #ffffff 0%, rgba(153, 153, 153, 0) 100%);
+  }
+  .expertisecard .expertisecardin {
+    padding: 26px 18px;
   }
   .expertisecard h3 {
     margin-bottom: 20px;
+    font-size: 18px;
   }
   .expertisecard h3 img {
     margin-right: 16px;
@@ -2006,7 +2056,7 @@ footer .footerinner .copyrights p a:hover {
     margin: 0 -6px;
   }
   .our_product .productsmain.slick-slider .slick-list {
-    padding: 0 12% 0 0 !important;
+    padding: 0 8% 0 0 !important;
   }
   .our_product .productsmain.slick-slider .slick-slide {
     padding-right: 6px;
@@ -2014,13 +2064,13 @@ footer .footerinner .copyrights p a:hover {
   }
   .productscard .productscardin {
     border-radius: 26px;
-    padding: 20px 18px;
+    padding: 20px 17px;
   }
   .productscard img {
     max-width: 56px;
   }
   .productscard h3 {
-    font-size: 18px;
+    font-size: 15px;
     margin-top: 16px;
   }
 }
