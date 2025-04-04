@@ -384,11 +384,9 @@ header .headercontent .navbar ul .dropdown-menu {
   border: 1px solid rgba(220, 220, 220, 0.7);
   border-top: none;
   background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(20px);
   left: -1px;
   border-radius: 0 0 28px 28px;
   transition: all 0.2s ease-in-out;
-  transform: translateY(10px);
   cursor: auto;
 }
 header .headercontent .navbar ul .dropdown-menu .listitem {
