@@ -101,10 +101,16 @@ img {
 }
 @media screen and (max-width: 992px) {
   .container {
-    max-width: 744px;
+    max-width: 768px;
+    padding: 0 32px;
   }
   .container.container_sm {
-    max-width: 744px;
+    max-width: 768px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    padding: 0 20px;
   }
 }
 
@@ -262,6 +268,65 @@ button, .navbar-toggler:focus {
   background: url("./../images/styledotheading.svg") no-repeat center;
   bottom: 0;
 }
+.proheading h1 {
+  font-size: 42px;
+  line-height: 48px;
+  font-weight: 300;
+  color: #fff;
+  padding-bottom: 52px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.proheading h1 span {
+  font-weight: 700;
+  color: #fff;
+  margin-left: 5px;
+}
+.proheading h1::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 13px;
+  background: url("./../images/styledotheading.svg") no-repeat center;
+  bottom: 0;
+}
+
+.breadcrumbs {
+  padding: 0 0 44px;
+  margin: 0;
+  list-style: none;
+  text-align: left;
+}
+.breadcrumbs li {
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+}
+.breadcrumbs li a {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+}
+.breadcrumbs li a:hover {
+  color: #E6B400;
+}
+.breadcrumbs li + li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10" fill="none"><path d="M1.27098 10C1.15473 10 1.03837 9.95557 0.949617 9.86682C0.772003 9.68921 0.772003 9.40159 0.949617 9.22409L5.17371 4.99999L0.949617 0.775896C0.772003 0.598282 0.772003 0.310668 0.949617 0.133168C1.12723 -0.0443324 1.41484 -0.0444461 1.59234 0.133168L6.13781 4.67863C6.31542 4.85624 6.31542 5.14386 6.13781 5.32136L1.59234 9.86682C1.50359 9.95557 1.38723 10 1.27098 10Z" fill="white"/></svg>') no-repeat center;
+  background-size: contain;
+  margin: 0 10px;
+}
+
+.backbtn {
+  display: none;
+}
 
 @media screen and (min-width: 1700px) {
   .btn {
@@ -282,6 +347,28 @@ button, .navbar-toggler:focus {
   .proheading h2 span {
     margin-left: 9px;
   }
+  .proheading h1 {
+    font-size: 64px;
+    line-height: 71px;
+    padding-bottom: 65px;
+  }
+  .proheading h1 span {
+    margin-left: 9px;
+  }
+  .breadcrumbs {
+    padding: 0 0 50px;
+  }
+  .breadcrumbs li {
+    font-size: 18px;
+  }
+  .breadcrumbs li a {
+    font-size: 18px;
+  }
+  .breadcrumbs li + li::before {
+    width: 12px;
+    height: 12px;
+    margin: 0 12px;
+  }
 }
 @media screen and (max-width: 992px) {
   .btn {
@@ -299,8 +386,31 @@ button, .navbar-toggler:focus {
   .proheading h2 span {
     margin-left: 5px;
   }
+  .proheading h1 {
+    font-size: 42px;
+    line-height: 49px;
+    padding-bottom: 40px;
+  }
+  .proheading h1 span {
+    margin-left: 5px;
+  }
 }
 @media screen and (max-width: 576px) {
+  .backbtn {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 12;
+    background: #272727;
+    left: 20px;
+    top: 26px;
+  }
+  .breadcrumbs {
+    display: none;
+  }
   .btn {
     font-size: 14px;
     padding: 11px 27px;
@@ -316,6 +426,11 @@ button, .navbar-toggler:focus {
     font-size: 26px;
     line-height: 31px;
     padding-bottom: 20px;
+  }
+  .proheading h1 {
+    font-size: 30px;
+    line-height: 36px;
+    padding-bottom: 24px;
   }
 }
 header {
@@ -368,11 +483,6 @@ header .headercontent .navbar ul .dropdown {
 }
 header .headercontent .navbar ul .dropdown:hover .navbaritem, header .headercontent .navbar ul .dropdown.active .navbaritem {
   color: #E6B400;
-}
-header .headercontent .navbar ul .dropdown:hover .dropdown-menu, header .headercontent .navbar ul .dropdown.active .dropdown-menu {
-  opacity: 1;
-  transform: translateY(0px);
-  display: flex;
 }
 header .headercontent .navbar ul .dropdown-menu {
   display: none;
@@ -1445,6 +1555,9 @@ footer .footerinner .copyrights p a:hover {
     left: 0;
     width: 100%;
   }
+  footer .graphics {
+    top: -10%;
+  }
 }
 @media screen and (max-width: 700px) and (min-width: 576px) {
   footer .footerinner .needhelp {
@@ -1483,6 +1596,9 @@ footer .footerinner .copyrights p a:hover {
   }
   footer .footerinner .copyrights .logo {
     display: none;
+  }
+  footer .graphics {
+    top: -8%;
   }
 }
 @media screen and (max-width: 576px) {
@@ -1699,6 +1815,352 @@ footer .footerinner .copyrights p a:hover {
     object-position: left;
   }
 }
+.maininnercontents {
+  position: relative;
+  background: url("./../images/expBanner_BG.png") no-repeat center;
+  background-size: cover;
+}
+.maininnercontents .content {
+  padding: 134px 0 80px;
+  margin: 0 auto;
+  text-align: center;
+}
+.maininnercontents .content p {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  margin: 0 0 30px;
+}
+.maininnercontents .experitesmain {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin: 60px 0 0;
+}
+.maininnercontents .experitesmain .expertisecard p {
+  text-align: left;
+  margin: 0;
+}
+
+.agile_product {
+  background-size: cover;
+  padding: 80px 0 80px;
+  position: relative;
+}
+.agile_product::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url("./../images/expSecond Section_BG.png");
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  background-position: bottom;
+}
+.agile_product .agilesmain {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 17px;
+}
+.agile_product.iffooter {
+  padding: 80px 0 130px;
+}
+
+.agilecard {
+  overflow: hidden;
+  padding: 0;
+  padding-bottom: 1.6px;
+  border-radius: 22px;
+  position: relative;
+  transition: background-position 1.5s ease-in-out;
+}
+.agilecard::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(to top, #ffffff 0%, rgba(153, 153, 153, 0) 100%);
+}
+.agilecard .agilecardin {
+  background-color: #242424;
+  padding: 26px 14px;
+  border-radius: 22px;
+  height: 100%;
+  text-align: center;
+  margin: 0.8px;
+  z-index: 1;
+  position: relative;
+}
+.agilecard img {
+  max-width: 56px;
+  margin: 0 auto;
+}
+.agilecard h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 20px 0 0;
+  color: #fff;
+  text-align: center;
+}
+.agilecard:hover h3 {
+  color: #E6B400;
+}
+
+.numberagile {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 17px;
+  position: relative;
+  align-items: center;
+  margin-bottom: 22px;
+}
+.numberagile::before {
+  content: "";
+  width: 84%;
+  left: 8%;
+  height: 1px;
+  background-color: #E6B400;
+  position: absolute;
+}
+.numberagile .numbagile {
+  border: 1px solid #E6B400;
+  background: #fff;
+  border-radius: 100%;
+  width: 34px;
+  height: 34px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  z-index: 1;
+}
+@media screen and (min-width: 1700px) {
+  .maininnercontents .content {
+    padding: 184px 0 120px;
+  }
+  .maininnercontents .content p {
+    font-size: 26px;
+    line-height: 33px;
+    margin: 0 0 50px;
+  }
+  .maininnercontents .experitesmain {
+    gap: 34px;
+    margin: 70px 0 0;
+  }
+  .agile_product {
+    padding: 120px 0;
+  }
+  .agile_product.iffooter {
+    padding: 120px 0 193px;
+  }
+  .numberagile::before {
+    height: 2px;
+  }
+  .numberagile .numbagile {
+    width: 46px;
+    height: 46px;
+    font-size: 22px;
+  }
+  .agilecard .agilecardin {
+    padding: 32px 15px;
+  }
+  .agilecard img {
+    max-width: 72px;
+  }
+  .agilecard h3 {
+    font-size: 22px;
+    margin: 30px 0 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  .maininnercontents .content {
+    padding: 126px 0 50px;
+  }
+  .maininnercontents .content p {
+    font-size: 18px;
+  }
+  .maininnercontents .experitesmain {
+    gap: 30px;
+    margin: 36px 0 0;
+  }
+  .agile_product {
+    padding: 50px 0;
+  }
+  .agile_product .agilesmain {
+    grid-template-columns: 1fr;
+  }
+  .agile_product.iffooter {
+    padding: 50px 0 135px;
+  }
+}
+@media screen and (max-width: 992px) and (min-width: 700px) {
+  .agilemain {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    gap: 15px;
+  }
+  .numberagile {
+    grid-template-columns: 1fr;
+    gap: 17px;
+    margin: 0;
+  }
+  .numberagile::before {
+    width: 2px;
+    top: 8%;
+    height: 84%;
+    left: 17px;
+  }
+  .agilecard .agilecardin {
+    padding: 20px 20px 20px 35px;
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 56px 1fr;
+    align-items: center;
+  }
+  .agilecard .agilecardin img {
+    max-width: 56px;
+  }
+  .agilecard .agilecardin h3 {
+    margin: 0;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 576px) {
+  .maininnercontents {
+    background-position: left;
+  }
+  .maininnercontents .content {
+    padding: 112px 0 40px;
+  }
+  .maininnercontents .content p {
+    font-size: 16px;
+  }
+  .maininnercontents .experitesmain {
+    display: block;
+    opacity: 0;
+  }
+  .maininnercontents .experitesmain .slick-track {
+    display: flex;
+  }
+  .maininnercontents .experitesmain .slick-track .slick-slide {
+    height: inherit !important;
+  }
+  .maininnercontents .experitesmain .slick-track .slick-slide > div {
+    height: 100%;
+  }
+  .maininnercontents .experitesmain .slick-track .slick-slide > div .expertisecard {
+    height: 100%;
+  }
+  .maininnercontents .experitesmain.slick-slider {
+    margin: 0 -8px;
+    width: calc(100% + 28px);
+  }
+  .maininnercontents .experitesmain.slick-slider .slick-list {
+    padding: 0 10% 0 0 !important;
+  }
+  .maininnercontents .experitesmain.slick-slider .slick-slide {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+  .maininnercontents .experitesmain.slick-slider .slick-slide:nth-child(2n) .expertisecard::before {
+    background: linear-gradient(to right, #ffffff 0%, rgba(153, 153, 153, 0) 100%);
+  }
+  .agilesmain {
+    display: block;
+    opacity: 0;
+  }
+  .agilesmain .slick-track {
+    display: flex;
+  }
+  .agilesmain .slick-track .slick-slide {
+    height: inherit !important;
+  }
+  .agilesmain .slick-track .slick-slide > div {
+    height: 100%;
+  }
+  .agilesmain .slick-track .slick-slide > div .agilecard {
+    height: 100%;
+  }
+  .agilesmain.slick-slider {
+    margin: 0 -6px;
+    width: calc(100% + 26px);
+  }
+  .agilesmain.slick-slider .slick-list {
+    padding: 0 8% 0 0 !important;
+  }
+  .agilesmain.slick-slider .slick-slide {
+    padding-right: 6px;
+    padding-left: 6px;
+  }
+  .numberagile {
+    display: block;
+    opacity: 0;
+  }
+  .numberagile::before {
+    display: none;
+  }
+  .numberagile .numbagile {
+    width: 34px !important;
+    height: 34px !important;
+    display: flex !important;
+    position: relative;
+  }
+  .numberagile .slick-track {
+    display: flex;
+  }
+  .numberagile .slick-track .slick-slide {
+    height: inherit !important;
+  }
+  .numberagile .slick-track .slick-slide > div {
+    height: 100%;
+  }
+  .numberagile .slick-track .slick-slide > div .numbagile {
+    height: 100%;
+  }
+  .numberagile.slick-slider {
+    margin: 0 -6px 22px;
+    width: calc(100% + 26px);
+  }
+  .numberagile.slick-slider .slick-list {
+    padding: 0 8% 0 0 !important;
+  }
+  .numberagile.slick-slider .slick-slide {
+    padding-right: 6px;
+    padding-left: 6px;
+    position: relative;
+  }
+  .numberagile.slick-slider .slick-slide::before {
+    content: "";
+    width: 100%;
+    left: 50%;
+    top: 17px;
+    height: 1px;
+    background-color: #E6B400;
+    position: absolute;
+  }
+  .numberagile.slick-slider .slick-slide:last-child::before {
+    display: none;
+  }
+  .agilecard .agilecardin {
+    padding: 20px 14px;
+  }
+  .agilecard h3 {
+    font-size: 16px;
+    margin: 18px 0 0;
+  }
+  .agile_product {
+    padding: 40px 0;
+  }
+  .agile_product.iffooter {
+    padding: 40px 0 125px;
+  }
+}
 .our_expertise {
   background: url("./../images/Expertise_BG.png") no-repeat center;
   background-size: cover;
@@ -1718,7 +2180,8 @@ footer .footerinner .copyrights p a:hover {
   padding-bottom: 150px;
 }
 
-.expertisecard {
+.expertisecard,
+.maininnercontents .expertisecard {
   overflow: hidden;
   padding: 0;
   padding-bottom: 1.6px;
@@ -1726,7 +2189,8 @@ footer .footerinner .copyrights p a:hover {
   position: relative;
   transition: background-position 1.5s ease-in-out;
 }
-.expertisecard::before {
+.expertisecard::before,
+.maininnercontents .expertisecard::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -1735,7 +2199,8 @@ footer .footerinner .copyrights p a:hover {
   top: 0;
   background: linear-gradient(to left, #ffffff 0%, rgba(153, 153, 153, 0) 100%);
 }
-.expertisecard .expertisecardin {
+.expertisecard .expertisecardin,
+.maininnercontents .expertisecard .expertisecardin {
   background-color: #242424;
   padding: 32px 36px;
   border-radius: 32px;
@@ -1744,7 +2209,8 @@ footer .footerinner .copyrights p a:hover {
   z-index: 1;
   position: relative;
 }
-.expertisecard h3 {
+.expertisecard h3,
+.maininnercontents .expertisecard h3 {
   font-size: 24px;
   font-weight: 700;
   margin: 0 0 24px;
@@ -1752,24 +2218,30 @@ footer .footerinner .copyrights p a:hover {
   display: flex;
   align-items: center;
 }
-.expertisecard h3 img {
+.expertisecard h3 img,
+.maininnercontents .expertisecard h3 img {
   margin-right: 22px;
 }
-.expertisecard p {
+.expertisecard p,
+.maininnercontents .expertisecard p {
   font-size: 18px;
   font-weight: 300;
   color: #fff;
 }
-.expertisecard p a {
+.expertisecard p a,
+.maininnercontents .expertisecard p a {
   color: #E6B400;
 }
-.expertisecard p a:hover {
+.expertisecard p a:hover,
+.maininnercontents .expertisecard p a:hover {
   color: #B57D16;
 }
-.expertisecard a:hover h3 {
+.expertisecard a:hover h3,
+.maininnercontents .expertisecard a:hover h3 {
   color: #E6B400;
 }
-.expertisecard:nth-child(2n)::before {
+.expertisecard:nth-child(2n)::before,
+.maininnercontents .expertisecard:nth-child(2n)::before {
   background: linear-gradient(to right, #ffffff 0%, rgba(153, 153, 153, 0) 100%);
 }
 .our_product {
@@ -1870,22 +2342,27 @@ footer .footerinner .copyrights p a:hover {
   .our_expertise.iffooter {
     padding-bottom: 190px;
   }
-  .expertisecard {
+  .expertisecard,
+  .maininnercontents .expertisecard {
     border-radius: 60px;
   }
-  .expertisecard .expertisecardin {
+  .expertisecard .expertisecardin,
+  .maininnercontents .expertisecard .expertisecardin {
     padding: 48px 44px;
     border-radius: 60px;
   }
-  .expertisecard h3 {
+  .expertisecard h3,
+  .maininnercontents .expertisecard h3 {
     font-size: 32px;
     line-height: 37px;
     margin-bottom: 26px;
   }
-  .expertisecard h3 img {
+  .expertisecard h3 img,
+  .maininnercontents .expertisecard h3 img {
     margin-right: 36px;
   }
-  .expertisecard p {
+  .expertisecard p,
+  .maininnercontents .expertisecard p {
     font-size: 21px;
     line-height: 27px;
   }
@@ -1931,22 +2408,27 @@ footer .footerinner .copyrights p a:hover {
   .our_expertise.iffooter {
     padding-bottom: 155px;
   }
-  .expertisecard {
+  .expertisecard,
+  .maininnercontents .expertisecard {
     border-radius: 26px;
   }
-  .expertisecard .expertisecardin {
+  .expertisecard .expertisecardin,
+  .maininnercontents .expertisecard .expertisecardin {
     padding: 26px;
     border-radius: 26px;
   }
-  .expertisecard h3 {
+  .expertisecard h3,
+  .maininnercontents .expertisecard h3 {
     font-size: 20px;
     line-height: 25px;
     margin-bottom: 24px;
   }
-  .expertisecard h3 img {
+  .expertisecard h3 img,
+  .maininnercontents .expertisecard h3 img {
     margin-right: 20px;
   }
-  .expertisecard p {
+  .expertisecard p,
+  .maininnercontents .expertisecard p {
     font-size: 18px;
     line-height: 23px;
   }
@@ -1977,16 +2459,7 @@ footer .footerinner .copyrights p a:hover {
     background: rgba(255, 255, 255, 0.6980392157) !important;
   }
 }
-@media screen and (max-width: 576px) {
-  .our_expertise {
-    padding: 20px 0 40px;
-  }
-  .our_expertise.featuredservice {
-    padding: 40px 0;
-  }
-  .our_expertise.iffooter {
-    padding-bottom: 110px;
-  }
+@media screen and (max-width: 700px) {
   .our_expertise .experitesmain {
     display: block;
     opacity: 0;
@@ -2005,6 +2478,7 @@ footer .footerinner .copyrights p a:hover {
   }
   .our_expertise .experitesmain.slick-slider {
     margin: 0 -8px;
+    width: calc(100% + 28px);
   }
   .our_expertise .experitesmain.slick-slider .slick-list {
     padding: 0 10% 0 0 !important;
@@ -2015,24 +2489,6 @@ footer .footerinner .copyrights p a:hover {
   }
   .our_expertise .experitesmain.slick-slider .slick-slide:nth-child(2n) .expertisecard::before {
     background: linear-gradient(to right, #ffffff 0%, rgba(153, 153, 153, 0) 100%);
-  }
-  .expertisecard .expertisecardin {
-    padding: 26px 18px;
-  }
-  .expertisecard h3 {
-    margin-bottom: 20px;
-    font-size: 18px;
-  }
-  .expertisecard h3 img {
-    margin-right: 16px;
-    max-width: 46px;
-  }
-  .expertisecard p {
-    font-size: 14px;
-    line-height: 19px;
-  }
-  .our_product {
-    padding: 40px 0 40px;
   }
   .our_product .productsmain {
     display: block;
@@ -2052,6 +2508,7 @@ footer .footerinner .copyrights p a:hover {
   }
   .our_product .productsmain.slick-slider {
     margin: 0 -6px;
+    width: calc(100% + 26px);
   }
   .our_product .productsmain.slick-slider .slick-list {
     padding: 0 8% 0 0 !important;
@@ -2059,6 +2516,39 @@ footer .footerinner .copyrights p a:hover {
   .our_product .productsmain.slick-slider .slick-slide {
     padding-right: 6px;
     padding-left: 6px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .our_expertise {
+    padding: 20px 0 40px;
+  }
+  .our_expertise.featuredservice {
+    padding: 40px 0;
+  }
+  .our_expertise.iffooter {
+    padding-bottom: 110px;
+  }
+  .expertisecard .expertisecardin,
+  .maininnercontents .expertisecard .expertisecardin {
+    padding: 26px 18px;
+  }
+  .expertisecard h3,
+  .maininnercontents .expertisecard h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  .expertisecard h3 img,
+  .maininnercontents .expertisecard h3 img {
+    margin-right: 16px;
+    max-width: 46px;
+  }
+  .expertisecard p,
+  .maininnercontents .expertisecard p {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .our_product {
+    padding: 40px 0 40px;
   }
   .productscard .productscardin {
     border-radius: 26px;
