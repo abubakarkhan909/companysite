@@ -270,15 +270,16 @@ $(document).ready(function () {
       if (!isMobileheader()) return;
 
       if (!$(e.target).closest(".navmobitem, .dropdown-menu").length) {
-          $("li").removeClass("active");
+          setTimeout(() => {
+            $("li").removeClass("active");
           $(".dropdown-menu").slideUp(300);
           $(".navbar_mob").removeClass("open-dropdown"); 
           $(".toggleitem").removeClass("toggleactive");
           $("body").removeClass("blurred");
+          }, 100);
           if ($previousShowLi.length) {
               $previousShowLi.addClass("show");
           }
-          alert("remmove");
       }
   });
 
