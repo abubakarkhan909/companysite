@@ -260,7 +260,6 @@ $(document).ready(function () {
               }else{
                 $(".toggleitem").removeClass("toggleactive");
               }
-              alert("added");
           }
           
       }
