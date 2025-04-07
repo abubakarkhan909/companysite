@@ -260,6 +260,7 @@ $(document).ready(function () {
               }else{
                 $(".toggleitem").removeClass("toggleactive");
               }
+              alert("added");
           }
           
       }
@@ -277,6 +278,7 @@ $(document).ready(function () {
           if ($previousShowLi.length) {
               $previousShowLi.addClass("show");
           }
+          alert("remmove");
       }
   });
 
