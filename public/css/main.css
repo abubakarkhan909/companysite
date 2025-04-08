@@ -273,7 +273,7 @@ button, .navbar-toggler:focus {
   line-height: 48px;
   font-weight: 300;
   color: #fff;
-  padding-bottom: 52px;
+  padding-bottom: 44px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -1342,6 +1342,9 @@ footer .footerinner .footer_navbar .footeritem a {
   line-height: 19px;
   color: #fff;
 }
+footer .footerinner .footer_navbar .footeritem a strong {
+  font-weight: 500;
+}
 footer .footerinner .footer_navbar .footeritem .socialsharing {
   display: flex;
   gap: 12px;
@@ -1947,7 +1950,7 @@ footer .footerinner .copyrights p a:hover {
   .maininnercontents .content p {
     font-size: 26px;
     line-height: 33px;
-    margin: 0 0 50px;
+    margin: 0 0 30px;
   }
   .maininnercontents .experitesmain {
     gap: 34px;
